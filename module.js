@@ -371,68 +371,6 @@ const modules = {
                     </section>
                 `,
             },
-            {
-                title: 'The American Civil War',
-                content: `
-                    <header class="lesson-header">
-                        <h2>The War Between the States</h2>
-                        <p class="lesson-intro">A defining conflict (1861–1865) that determined the survival of the Union and the fate of slavery in America.</p>
-                    </header>
-                    <div class="article-section">
-                        <h4>Key Conflict: Federal vs. State Power</h4>
-                        <p>Placeholder: Analysis of the 13th, 14th, and 15th Amendments.</p>
-                    </div>
-                `
-            },
-            {
-                title: 'UK Industrial Revolution',
-                content: `
-                    <header class="lesson-header">
-                        <h2>The Workshop of the World</h2>
-                        <p class="lesson-intro">How Great Britain transformed from an agrarian society to a global industrial superpower.</p>
-                    </header>
-                    <div class="article-section">
-                        <p>Placeholder: Impact of the Steam Engine and the rise of the British Empire.</p>
-                    </div>
-                `
-            },
-            {
-                title: 'The New Deal Era',
-                content: `
-                    <header class="lesson-header">
-                        <h2>Economic Crisis and Reform</h2>
-                        <p class="lesson-intro">How FDR’s "New Deal" restructured the American economy after the 1929 stock market crash.</p>
-                    </header>
-                    <div class="article-section">
-                        <p>Placeholder: The expansion of the Federal Government's role in citizen welfare.</p>
-                    </div>
-                `
-            },
-            {
-                title: 'The Civil Rights Movement',
-                content: `
-                    <header class="lesson-header">
-                        <h2>The Struggle for Equality</h2>
-                        <p class="lesson-intro">The non-violent social movement (1950s-1960s) to end racial segregation and discrimination.</p>
-                    </header>
-                    <div class="article-section">
-                        <p>Placeholder: Analysis of "I Have a Dream" and the Civil Rights Act of 1964.</p>
-                    </div>
-                `
-            },
-            {
-                title: 'British Parliament',
-                content: `
-                    <header class="lesson-header">
-                        <h2>The Westminster Model</h2>
-                        <p class="lesson-intro">An overview of the House of Commons, the House of Lords, and the role of the Monarch.</p>
-                    </header>
-                    <div class="article-section">
-                        <p>Placeholder: How laws are passed in the UK vs. the US system.</p>
-                    </div>
-                `
-            },
-
         ],
     },
     'gr-wr': {
