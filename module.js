@@ -84,6 +84,79 @@ const modules = {
                 `,
             },
             {
+                title: 'The Seat of Justice: Rosa Parks',
+                content: `
+                    <header class="lesson-header">
+                        <h2>Civil Disobedience: The Rosa Parks Story</h2>
+                        <p class="lesson-intro">On December 1, 1955, a seamstress in Montgomery, Alabama, refused to give up her seat, sparking a movement that would redefine American democracy.</p>
+                    </header>
+
+                    <hr>
+
+                    <section class="constitution-text">
+                        <h3>The Quiet Defiance</h3>
+                        <p>Rosa Parks did not refuse to move because she was "physically tired." As she later noted, she was "tired of giving in." Her arrest became the catalyst for the Montgomery Bus Boycott, a 381-day protest that crippled the city's segregated transit system.</p>
+
+                        <div class="article-section" style="border-left: 4px solid #d4af37; padding-left: 15px; background: #3a3a3a; color: #f0f0f0; font-style: italic;">
+                            <h4>The Moral Law vs. The State Law</h4>
+                            <p>"I felt that I had a right to be treated as any other passenger. We would have to know what it was like to be a human being and be treated as such." — Rosa Parks</p>
+                        </div>
+                    </section>
+
+                    <hr>
+
+                    <section class="timeline-layout">
+                        <h3>The Ripple Effect</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 15px;">
+                                <strong>Dec 1, 1955:</strong> Rosa Parks is arrested for violating Chapter 6, Section 11 of the Montgomery City Code.
+                            </li>
+                            <li style="margin-bottom: 15px;">
+                                <strong>Dec 5, 1955:</strong> A young Dr. Martin Luther King Jr. leads the start of the city-wide boycott.
+                            </li>
+                            <li style="margin-bottom: 15px;">
+                                <strong>Nov 13, 1956:</strong> The Supreme Court rules that bus segregation is unconstitutional (<em>Browder v. Gayle</em>).
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="vocabulary">
+                        <h3>Civic Vocabulary</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Term</th>
+                                    <th>Definition</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Civil Disobedience</strong></td>
+                                    <td>The active, professed refusal of a citizen to obey certain laws of a government as a form of moral protest.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Jim Crow Laws</strong></td>
+                                    <td>State and local laws that enforced racial segregation in the Southern United States.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Boycott</strong></td>
+                                    <td>A collective refusal to buy, use, or participate in something as a way of protesting or forcing change.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Unconstitutional</strong></td>
+                                    <td>Something that is not allowed by the Constitution of a country.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <div class="article-section" style="border: 1px dashed #d4af37; padding: 15px; margin-top: 20px;">
+                        <h4>The Emotional Weight</h4>
+                        <p>Rosa Parks reminds us that in a civilized society, <strong>one person's integrity</strong> can outweigh the power of an unjust system. Her story is not just about a seat on a bus; it is about the inherent <strong>human dignity</strong> that no law is allowed to take away.</p>
+                    </div>
+                `,
+            },
+            {
                 title: 'The Epstein Case Files',
                 content: `
                     <header class="lesson-header">
