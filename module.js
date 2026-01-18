@@ -232,6 +232,76 @@ const modules = {
                 `,
             },
             {
+                title: 'The First Amendment: Freedom of Speech',
+                content: `
+                    <header class="lesson-header">
+                        <h2>The First Amendment: Freedom of Speech</h2>
+                        <p class="lesson-intro">"Congress shall make no law... abridging the freedom of speech." But what does that actually mean in the modern world?</p>
+                    </header>
+
+                    <hr>
+
+                    <section class="constitution-text">
+                        <h3>What is Protected?</h3>
+                        <p>Freedom of speech protects not just the words we speak, but <strong>symbolic speech</strong>—actions that convey a message, like wearing a protest armband or burning a flag. It is designed to protect "unpopular" ideas, as popular ideas don't need protection.</p>
+
+                        <div class="article-section" style="border-left: 4px solid #0056b3; padding-left: 15px; background: #2c3e50; color: #ffffff;">
+                            <h4>The "Marketplace of Ideas"</h4>
+                            <p>The Supreme Court holds that the remedy for "bad" speech is not censorship, but "more speech." The government cannot ban speech simply because it is offensive or hateful.</p>
+                        </div>
+                    </section>
+
+                    <hr>
+
+                    <section class="timeline-layout">
+                        <h3>When Speech Becomes Illegal</h3>
+                        <p>Freedom of speech is not absolute. There are specific categories where the government <strong>can</strong> step in:</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 15px;">
+                                <strong>1. True Threats:</strong> Statements where the speaker means to communicate a serious expression of an intent to commit an act of unlawful violence to a particular individual.
+                            </li>
+                            <li style="margin-bottom: 15px;">
+                                <strong>2. Incitement:</strong> Speech that is intended to, and likely to, incite "imminent lawless action" (e.g., telling a mob to burn down a specific building right now).
+                            </li>
+                            <li style="margin-bottom: 15px;">
+                                <strong>3. Defamation:</strong> Knowingly spreading false information that ruins a person's reputation (Libel and Slander).
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="vocabulary">
+                        <h3>Legal Standards</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Term</th>
+                                    <th>Definition</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Content Neutrality</strong></td>
+                                    <td>The principle that the government can't limit speech based on the message, only the "time, place, and manner."</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Fighting Words</strong></td>
+                                    <td>Speech that by its very utterance inflicts injury or tends to incite an immediate breach of the peace.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Prior Restraint</strong></td>
+                                    <td>Government action that prohibits speech or other expression before it can take place (usually unconstitutional).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <div class="article-section" style="border: 2px solid #0056b3; padding: 15px; margin-top: 20px; border-radius: 8px;">
+                        <h4>The "Illegal Threat" Test</h4>
+                        <p>To be considered an <strong>illegal threat</strong>, the law looks at the "reasonable person" standard. Would a reasonable person hear those words and fear for their physical safety? Venting frustration or using hyperbole ("I'm so mad I could kill someone") is usually protected; "I am coming to your house at 5 PM to hurt you" is a crime.</p>
+                    </div>
+                `,
+            },
+            {
                 title: 'The Second Amendment',
                 content: `
                     <header class="lesson-header">
