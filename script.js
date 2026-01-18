@@ -70,7 +70,10 @@ const checkbox = document.getElementById('sidebar-active')
 
 linksContainerEls.forEach(el =>{
     el.addEventListener('click', ()=>{
-        checkbox.checked = false;
+
+        setTimeout(()=>{
+            checkbox.checked = false;
+        }, 100)
     })
 })
 

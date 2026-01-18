@@ -712,13 +712,36 @@ footer{
     }
 }
 
+/* @media(max-width: 1100px) {
+
+    .contact-section{
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .contact-texts-container{
+        max-width: 50%;
+    }
+
+    .contact-form{
+        max-width: 50%;
+        margin: 30px;
+    }
+
+} */
+
 @media(min-width: 1100px) {
     .contact-section{
         display: flex;
         align-items: flex-start;
     }
 
+    .contact-texts-container{
+        max-width: 50%;
+    }
+
     .contact-form{
+        max-width: 50%;
         margin: 30px;
     }
 
