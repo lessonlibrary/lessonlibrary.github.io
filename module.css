@@ -1,0 +1,191 @@
+.module-hero{
+    width: 97vw;
+    margin: 10px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+.module-hero::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #000, #312e2e);
+    opacity: 0.7;
+}
+.module-hero-title{
+    position: relative;
+    margin: 20px 0 5px 20px;
+    z-index: 2;
+    font-size: 2.2rem;
+    color: #ddd;
+}
+.tags-container{
+    margin: 20px 0 10px 15px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: start;
+}
+.tag{
+    font-family: sans-serif;
+    margin: 0 2px 10px 10px;
+    padding: 1px 8px 3px 5px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+.tag svg{
+    transform: translateY(3px);
+    /* margin-right: px; */
+}
+.exam-tag{
+    background-color: #ffe4e1cd;
+    color:#991b1b;
+}
+.coef-tag{
+    background-color: #fff3d4de;
+    color: #593d00;
+}
+.lessons-tag{
+    background-color: #d1f7c4c7;
+    color: #155724;
+}
+.back-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff20;
+    border-radius: 10px;
+    margin: 10px 0 0 10px;
+    position: relative;
+    z-index: 2;
+    width: 40px;
+}
+.back-btn svg{
+    fill: #bbb;
+}
+
+.back-btn:active{
+    transform: scale(0.98);
+}
+
+.nav-btn{
+    flex-shrink: 0;
+    background-color: #333;
+    padding: 17px 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #eee;
+    border: none;
+    border-radius: 7px;
+    border: 2px solid #222;
+    cursor: pointer;
+}
+.nav-btn:active{
+    transform: scale(0.99);
+}
+.nav-btn.active{
+    background-color: #222;
+    border-color: #111;
+    color: var(--accent-color);
+}
+.navigation-buttons-container{
+    margin: 5px auto;
+    width: 97vw;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    gap: 5px;
+}
+
+/* The code below was added by Gemini */
+
+.navigation-buttons-container {
+    /* 1. Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* 2. Hide scrollbar for Firefox */
+    scrollbar-width: none;
+
+    /* 3. Hide scrollbar for IE, Edge and Firefox legacy */
+    -ms-overflow-style: none;
+    
+    /* Optional: helps scrolling feel "snappy" on mobile */
+    -webkit-overflow-scrolling: touch; 
+}
+
+/* The code added by Gemini ends here */
+
+.lessons-container{
+    background-color: #333;
+    margin: 5px auto;
+    padding: 10px 10px;
+    width: 97vw;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+}
+.lesson{
+    display: none;
+}
+.lesson.active{
+    display: block;
+    animation: slideUp 0.4s ease
+}
+
+@keyframes slideUp{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width: 550px) {
+    .module-hero-title{
+        margin: 5px 10px 10px;
+        font-size: 1.8rem;
+    }
+    .tags-container{
+        margin: 3px;
+    }
+    
+    .navigation-buttons-container{
+        margin: 3px auto;        
+    }
+
+}
+
+@media(max-width: 400px) {
+    .tag{
+        font-size: 0.8rem;
+    }
+
+}
+
+
+
+
+
+.lesson h2 { color: var(--accent-color); margin-bottom: 5px; }
+.lesson h3 { color: #ddd; border-left: 4px solid var(--accent-color); padding-left: 10px; margin-top: 20px; }
+.preamble-quote { font-style: italic; background: #444; padding: 15px; border-radius: 5px; color: #eee; line-height: 1.6; }
+.article-section h4 { color: #bbb; margin-bottom: 5px; }
+.article-section p { color: #ccc; margin-bottom: 15px; font-family: serif; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid #555; color: #eee; }
+th { color: var(--accent-color); text-transform: uppercase; font-size: 0.8rem; }

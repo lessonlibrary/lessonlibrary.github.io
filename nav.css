@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root{
+    --color-one: #eee;
+    --color-two: #444;
+    --accent-color: #bf60d4;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+    background-color: var(--color-two);
+    color: var(--color-one);
+
+}
+body::selection{
+    background-color: #bf60d47b;
+}
+nav{
+    background-color: #2a2a2a;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+}
+
+.links-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    margin-right: 50px;
+}
+
+.home-link{
+    margin-left: 60px;
+}
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    color: #ddd;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    position: relative;
+}
+
+nav a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform ease 0.3s;
+}
+
+nav a:hover::after{
+    transform: scaleX(1);
+}
+
+nav a:hover{
+    color: var(--accent-color);
+}
+.home-link{
+    margin-right: auto;
+}
+#close-sidebar-button,
+#open-sidebar-button{
+    display: none;
+}
+nav svg{
+    fill: var(--color-one)
+}
+nav input{
+    display: none;
+}
+
+@media(max-width: 501px){
+    nav{
+        height: 60px;
+    }
+
+    nav a{
+        color: #eee;
+    }
+
+    nav a:hover{
+        background-color: #222;
+    }
+
+    nav a:hover::after{
+        display: none;
+    }
+
+    .links-container{
+        background-color: #323232;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        width: 300px;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        box-shadow: -2px 0 10px #444;
+        z-index: 10;
+        transition: 0.7s ease-out;
+        margin-right: 0;
+    }
+    .home-link{
+        margin-left: 0;
+    }
+    .links-container a{
+        height: 60px;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    #close-sidebar-button,
+    #open-sidebar-button{
+        display: block;
+        padding: 20px;
+    }
+    #sidebar-active:checked ~ .links-container{
+        right: 0;
+    }
+    #sidebar-active:checked ~ #overlay{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 9;
+        top: 0;
+        left: 0;
+    }
+}
+
