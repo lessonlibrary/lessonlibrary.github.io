@@ -731,6 +731,9 @@ footer{
         padding: 10px 0 0 10px;
     }
 
+    /* .contact-section-p{
+        font-size: ;
+    } */
     .email-label,
     .name-label,
     .message-label{
@@ -916,6 +919,10 @@ footer{
 
 }
 @media (min-width: 1000px) {
+
+    .modules-title{
+        font-size: 3.2rem;
+    }
     .module{
         width: 270px;
         height: 120px;
@@ -952,6 +959,7 @@ footer{
 
     .contact-section-title{
         font-size: 3.7rem;
+        padding-bottom: 50px;
     }
 
     .contact-section-p{
