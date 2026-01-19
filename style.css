@@ -375,7 +375,7 @@ body::selection{
 
 .contact-section-p{
     color: #bbb;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 15px;
 }
 
@@ -533,7 +533,7 @@ footer{
 }
 
 
-@media(max-width: 400px){
+@media(max-width: 359px){
 
     .hero{
         height: 500px;
@@ -625,7 +625,7 @@ footer{
     }
 }
 
-@media (min-width: 400px) and (max-width: 500px) {
+@media (min-width: 360px) and (max-width: 500px) {
     .hero{
         height: 500px;
         background-position: calc(100% + 70px);
