@@ -532,7 +532,7 @@ footer{
     }
 }
 
-
+/* Small Phones (iPhone SE) */
 @media(max-width: 359px){
 
     .hero{
@@ -582,12 +582,12 @@ footer{
 
     .title-insight::before{
         width: 23px;
-        left: -12%;
+        left: -10%;
     }
 
     .title-insight::after{
         width: 23px;
-        right: -12%;
+        right: -10%;
     }
     
     .modules-title{
@@ -596,16 +596,18 @@ footer{
 
     .module{
         height: 80px;
-        width: 160px;
+        width: 150px;
     }
 
     .module span{
-        font-size: 1.14rem;
+        font-size: 1.1rem;
     }
     
     .m8 span{
-        font-size: 1.04rem;
+        font-size: 1rem;
     }
+
+
     .faqs-section{
         padding: 50px 20px;
     }
@@ -625,6 +627,7 @@ footer{
     }
 }
 
+/* Normal phones Redmi 9T*/
 @media (min-width: 360px) and (max-width: 500px) {
     .hero{
         height: 500px;
@@ -681,10 +684,12 @@ footer{
     }
 
     .title-insight::before{
-    left: -18%;
+        left: -13%;
+        width: 20px;
     }
     .title-insight::after{
-    right: -18%;
+        right: -13%;
+        width: 20px;
     }
 
     .modules-title{
@@ -694,6 +699,10 @@ footer{
         padding: 15px 0 0;
         position: relative;
         text-align: center;
+    }
+
+    .module{
+        width: 160px;
     }
 
     .module span{
