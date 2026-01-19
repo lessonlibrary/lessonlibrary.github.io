@@ -39,7 +39,7 @@ const components = {
             <a href="" class="home">Home</a>
             <a href="index.html#study-now" class="">Modules</a>
             <a href="index.html#contact" class="">Contact</a>
-            <a href="" class="">About</a>
+            <a href="#" class="">About</a>
         </div>
 
         <p class="madeWithLove">

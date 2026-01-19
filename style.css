@@ -88,7 +88,6 @@ body::selection{
 
 .cta-button svg{
     transform: translateY(7px);
-    /* vertical-align: middle; */
     margin-left: 17px;
     padding: 0;
     fill: #000;
@@ -249,6 +248,7 @@ body::selection{
 .m9::after {background-color: #1d022d;}
 
 .faqs-section{
+    margin: 0 auto;
     padding: 70px 30px 70px;
     max-width: 1500px;
 }
@@ -381,7 +381,7 @@ body::selection{
 
 .contact-form{
     width: 90vw;
-    max-width: 5000px; /*???*/
+    max-width: 900px; /*???*/
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -532,9 +532,100 @@ footer{
     }
 }
 
-/* Potential target audience*/
 
-@media(max-width: 550px) {
+@media(max-width: 400px){
+
+    .hero{
+        height: 500px;
+        background-position: calc(100% + 70px);
+    }
+    .title{
+        font-size: 2.1rem;
+        line-height: 50px;
+        max-width: 450px;
+        padding: 45px 0 15px 20px;
+    }
+
+    .introduction{
+        margin: 10px 35px 20px 20px ;
+        font-size: 1rem;
+        line-height: 33px;
+        max-width: 400px;
+    }
+
+    .cta-buttons{
+        margin-left: 20px;
+    }
+
+    .cta-button{
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 2px 15px 13px 15px;
+        margin-top: 25px;
+    }
+
+    .cta-button:hover{
+        box-shadow: none;
+    }
+
+    .cta-button:hover::before{
+        display: none;
+    }
+
+    .cta-button:active{
+        transform: scale(0.98);
+    }
+
+    .cta-button-contact{
+        display: none;
+    }
+
+    .title-insight::before{
+        width: 23px;
+        left: -12%;
+    }
+
+    .title-insight::after{
+        width: 23px;
+        right: -12%;
+    }
+    
+    .modules-title{
+        font-size: 2.5rem;
+    }
+
+    .module{
+        height: 80px;
+        width: 160px;
+    }
+
+    .module span{
+        font-size: 1.14rem;
+    }
+    
+    .m8 span{
+        font-size: 1.04rem;
+    }
+    .faqs-section{
+        padding: 50px 20px;
+    }
+    .faqs-section-title{
+        font-size: 2rem;
+        padding: 10px 0 20px;
+    }
+    .faq-header{
+        font-size: 1.2rem;
+    }
+    .faq-body{
+        font-size: 1rem;
+    }
+    .contact-section-title{
+        font-size: 2.8rem;
+        padding: 15px 0 20px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
     .hero{
         height: 500px;
         background-position: calc(100% + 70px);
@@ -542,6 +633,7 @@ footer{
     .title{
         font-size: 2.3rem;
         line-height: 55px;
+        max-width: 450px;
         padding: 45px 0 15px 30px;
     }
 
@@ -669,80 +761,193 @@ footer{
 
 }
 
-@media(max-width: 400px){
 
-    .title-insight::before{
-        width: 23px;
-        left: -12%;
+@media(min-width: 500px) and (max-width: 700px){
+    .hero{
+        height: 520px;
+        background-position: calc(100% + 20px);
+    }
+    .title{
+        font-size: 2.8rem;
+        padding: 40px 0 15px 30px;
+        max-width: 550px;
+    }
+    .introduction{
+        margin: 10px 35px 20px 30px ;
+        font-size: 1.2rem;
+        line-height: 33px;
+        max-width: 490px;
+    }
+    .cta-buttons{
+        margin-left: 30px;
     }
 
-    .title-insight::after{
-        width: 23px;
-        right: -12%;
+    .cta-button{
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 8px 22px 17px 22px;
+        margin-top: 20px;
+    }
+
+    .cta-button-contact{
+        font-size: 1rem;
+        padding: 15px 18px;
+        transform: translateY(11px);
     }
 
     .module{
-        height: 80px;
         width: 160px;
     }
 
     .module span{
-        font-size: 1.14rem;
+        font-size: 1.1rem;
+    }
+
+    .m8 span{
+        font-size: 1rem;
+    }
+
+    .faqs-section{
+        padding: 40px 20px 40px;
+    }
+
+    .faqs-section-title{
+        font-size: 2.2rem;
+        padding-top: 15px;
+    }
+
+    .faq-toggle{
+        left: 5px;
+        top: 20px;
     }
     
-    .m8 span{
-        font-size: 1.04rem;
+    .contact-section{
+        padding: 50px 20px 50px;
+    }
+
+    .contact-section-title{
+        font-size: 2.7rem;
+        padding: 10px 0 0 10px;
+    }
+
+    .email-label,
+    .name-label,
+    .message-label{
+        font-size: 1.1rem;
+        padding-bottom: 8px;
+    }
+
+    .email-label, .message-label{
+        padding-top: 8px;
+    }
+
+    .email-input, .name-input{
+        padding: 21px 10px;
+        font-size: 1rem;
+    }
+
+    .message-input{
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .send-btn{
+        font-size: 1.1rem;
+        margin-top: 35px;
+        padding: 10px;
+    }
+
+    .contact-section-p{
+        font-size: 1.1rem;
+        padding: 30px 0;
+        margin: 0;
     }
 }
-
-@media(min-width: 600px) {
-    .module{
-        height: 120px;
-        width: 270px;
-    } 
-    .faq-container{
-        width: 100%;
-        max-width: 900px;
+@media(min-width: 700px) and (max-width: 1000px){
+    .hero{
+        background-position: calc(100% + 10px);
     }
+    .title{
+        font-size: 3.4rem;
+        max-width: 800px;
+        padding: 60px 20px 15px 40px;
+    }
+    .introduction{
+        margin: 30px 35px 20px 40px ;
+        font-size: 1.2rem;
+        line-height: 33px;
+        max-width: 480px;
+    }
+    .cta-buttons{
+        margin-left: 40px;
+    }
+
+    .cta-button{
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding: 15px 25px 19px 27px;
+        margin-top: 30px;
+    }
+    
+    .cta-button-contact{
+        transform: translateY(15px);
+    }
+
+    .module{
+        width: 250px;
+        height: 110px;
+    }
+    .module span{
+        font-size: 1.3rem;
+    }
+
     .contact-section-title{
         padding: 15px 0 30px;
     }
+
     .contact-section-p{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        margin: 0 0 30px;
     }
+
 }
+@media (min-width: 1000px){
+    .module{
+        width: 270px;
+        height: 120px;
+    }
 
-/* @media(max-width: 1100px) {
+    .faqs-container{
+        max-width: 1000px;
+    }
+
+    .faq-header{
+        padding: 23px 23px 23px 70px;
+    }
+
+    .faq-header svg{
+        transform: translateY(5px);
+    }
 
     .contact-section{
         display: flex;
         align-items: flex-start;
-    }
-
-    .contact-texts-container{
-        max-width: 50%;
+        padding: 50px 0px 70px 20px;
     }
 
     .contact-form{
+        max-width: 900px;
         max-width: 50%;
         margin: 30px;
     }
 
-} */
-
-@media(min-width: 1100px) {
-    .contact-section{
-        display: flex;
-        align-items: flex-start;
-    }
-
     .contact-texts-container{
         max-width: 50%;
+        padding: 70px 0 0 30px;
     }
 
-    .contact-form{
-        max-width: 50%;
-        margin: 30px;
+    .contact-section-title{
+        font-size: 3.7rem;
     }
 
     .contact-section-p{
