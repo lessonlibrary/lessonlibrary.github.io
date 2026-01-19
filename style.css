@@ -260,14 +260,20 @@ body::selection{
 }
 
 .faqs-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 90%;
+    max-width: 900px;
+    gap: 4px;
     margin: 20px auto;
 }
 
 .faq-container{
-    background-color: #333;
+    background-color: #303030;
     position: relative;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     border-radius: 4px;
+
 
 }
 
@@ -277,7 +283,7 @@ body::selection{
     font-weight: 500;
     cursor: pointer;
     display: block;
-    border-top: 4px solid var(--border-color);
+    /* border-top: 4px solid var(--border-color); */
 }
 
 
@@ -294,6 +300,7 @@ body::selection{
     left: 8px;
     top: 18px;
     cursor: pointer;
+    transform: translateY(-5px);
 }
 
 .faq-toggle svg{
@@ -532,6 +539,35 @@ footer{
     }
 }
 
+.go-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    z-index: 8;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    opacity: 0;
+    transition: ease 0.7s;
+}
+
+.go-top:hover{
+    background-color: #222;
+}
+.go-top svg{
+    fill: #222;
+    /* transform: translateX(-1px); */
+}
+.go-top:hover svg{
+    fill: var(--accent-color)
+}
+
 /* Small Phones (iPhone SE) */
 @media(max-width: 359px){
 
@@ -596,7 +632,7 @@ footer{
 
     .module{
         height: 80px;
-        width: 150px;
+        width: 140px;
     }
 
     .module span{
@@ -626,7 +662,6 @@ footer{
         padding: 15px 0 20px;
     }
 }
-
 /* Normal phones Redmi 9T*/
 @media (min-width: 360px) and (max-width: 500px) {
     .hero{
@@ -687,6 +722,7 @@ footer{
         left: -13%;
         width: 20px;
     }
+
     .title-insight::after{
         right: -13%;
         width: 20px;
@@ -702,7 +738,7 @@ footer{
     }
 
     .module{
-        width: 160px;
+        width: 150px;
     }
 
     .module span{
@@ -774,7 +810,6 @@ footer{
     }
 
 }
-
 @media(min-width: 500px) and (max-width: 700px) {
     .hero{
         height: 520px;
@@ -940,6 +975,11 @@ footer{
 
     .faq-header{
         padding: 23px 23px 23px 70px;
+        transition: ease-out 0.2s;
+    }
+
+    .faq-header:hover{
+        background-color: #383838;
     }
 
     .faq-header svg{

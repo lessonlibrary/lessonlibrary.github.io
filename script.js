@@ -62,6 +62,19 @@ function injectComponents(){
 }
 injectComponents()
 
+const goTopBtn = document.querySelector('.go-top')
+
+// the go up button yaay!
+window.addEventListener('scroll', ()=>{
+    scrollY > 500 ? goTopBtn.style.opacity = '1' : goTopBtn.style.opacity = '0'
+})
+
+goTopBtn.addEventListener('click', ()=>{
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    })
+})
 
 // navigation bar
 
