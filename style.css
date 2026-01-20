@@ -820,7 +820,7 @@ footer{
         margin-left: 25px;
         margin-bottom: 20px;
         width: 250px;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .drop-down-menu-label{
@@ -829,6 +829,10 @@ footer{
 
     .level-menu{
         width: 250px;
+    }
+    
+    .level-menu li{
+
     }
 
     .module{
