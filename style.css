@@ -172,14 +172,28 @@ body::selection{
     padding: 10px 20px 20px 20px;
 }
 
+.levels-container{
+    max-width: fit-content;
+    margin: auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.levels-label{
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
 .drop-down-menu{
     margin-left: 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     font-size: 1.2rem;
     transition: ease 0.4s;
 }
 
-.drop-down-menu-label{
+.ddm-selected{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -187,7 +201,7 @@ body::selection{
     background-color: #303030;
     color: var(--accent-color);
     font-weight: 900;
-    width: 300px;
+    width: 270px;
     margin-bottom: 5px;
     cursor: pointer;
     border-radius: 5px;
@@ -195,52 +209,43 @@ body::selection{
     position: relative;
 }
 
-.drop-down-menu-label:hover{
-    background-color: #3a3a3a;
-}
-
-.drop-down-menu-toggle{
+.ddm-toggle{
     width: 30px;
     height: 30px;
 }
 
-.drop-down-menu-toggle svg{
+.ddm-toggle svg{
     fill: var(--accent-color);
     width: 100%;
     height: 100%;
 }
-.drop-down-menu-toggle .angle-up{
+.ddm-toggle .angle-up{
     display: none;
 }
 
-.drop-down-menu-label.active 
-.drop-down-menu-toggle 
-.angle-up{
+.ddm-selected.active .ddm-toggle .angle-up{
     display: block;
 }
-.drop-down-menu-label.active 
-.drop-down-menu-toggle 
-.angle-down{
+.ddm-selected.active .ddm-toggle .angle-down{
     display: none;
 }
 
 .level-menu{
     position: absolute;
     background-color: #303030;
-    width: 300px;
+    width: 270px;
     display: none;
     z-index: 3;
     border-radius: 5px;
 }
 
-.drop-down-menu-label.active ~ .level-menu{
+.ddm-selected.active ~ .level-menu{
     display: block;
 }
 
 .level-menu li{
     list-style-type: none;
     padding: 10px 15px;
-    margin: 10px;
     display: flex;
     justify-content: space-between;
     border-radius: 5px;
@@ -248,7 +253,6 @@ body::selection{
     color: #ccc;
     font-weight: 600;
     transform: ease-out 0.3s;
-
 }
 
 .level-menu li svg{
@@ -822,28 +826,43 @@ footer{
     }
 
     .modules-title{
-        font-size: 2.4rem;
+        font-size: 2.6rem;
         display: block;
-        margin: 0 0 20px 0;
+        margin: 0 0 30px 0;
         padding: 15px 0 0;
         position: relative;
         text-align: center;
     }
 
-    .drop-down-menu{
-        margin-left: 25px;
+    .levels-container{
         margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .levels-label{
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    .drop-down-menu{
         width: 250px;
         font-size: 1.1rem;
     }
 
-    .drop-down-menu-label{
+    .ddm-selected{
         width: 250px;
-        padding: 13px 15px 10px;
+        padding: 10px 10px 6px;
+    }
+
+    .ddm-selected:hover{
+        background-color: #303030;
     }
 
     .level-menu{
         width: 250px;
+    }
+
+    .level-menu li{
+        margin: 0;
     }
     
     .module{
