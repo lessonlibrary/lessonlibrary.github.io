@@ -90,6 +90,18 @@ linksContainerEls.forEach(el =>{
     })
 })
 
+//drop-down-menu logic
+
+const levelMenu = document.querySelector('.level-menu')
+const menuLabel = document.querySelector('.drop-down-menu-label')
+
+menuLabel.addEventListener('click', ()=> {
+    menuLabel.classList.toggle('active')
+})
+
+if(menuLabel.classList.contains('active')){
+    window.addEventListener('click', ()=> menuLabel.classList.remove('active'))
+}
 //faqs logic
 
 const faqHeaders = document.querySelectorAll('.faq-header')

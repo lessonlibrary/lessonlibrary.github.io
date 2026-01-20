@@ -172,6 +172,85 @@ body::selection{
     padding: 10px 20px 20px 20px;
 }
 
+.drop-down-menu{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.drop-down-menu-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 10px;
+    background-color: #303030;
+    color: #999;
+    font-weight: 900;
+    width: 300px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: ease-out 0.3s;
+    position: relative;
+}
+
+.drop-down-menu-label:hover{
+    background-color: #3a3a3a;
+}
+
+.drop-down-menu-toggle{
+    width: 30px;
+    height: 30px;
+}
+
+.drop-down-menu-toggle svg{
+    fill: #999;
+    width: 100%;
+    height: 100%;
+}
+.drop-down-menu-toggle .angle-up{
+    display: none;
+}
+
+.drop-down-menu-label.active 
+.drop-down-menu-toggle 
+.angle-up{
+    display: block;
+}
+.drop-down-menu-label.active 
+.drop-down-menu-toggle 
+.angle-down{
+    display: none;
+}
+
+.level-menu{
+    position: absolute;
+    background-color: #303030;
+    width: 300px;
+    display: none;
+    z-index: 3;
+    border-radius: 5px;
+}
+
+.drop-down-menu-label.active ~ .level-menu{
+    display: block;
+}
+
+.level-menu li{
+    list-style-type: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ccc;
+    font-weight: 600;
+    transform: ease-out 0.3s;
+
+}
+
+.level-menu li:hover{
+    background-color: #3a3a3a;
+}
 .modules{
     display: flex;
     flex-wrap: wrap;
@@ -735,6 +814,21 @@ footer{
         padding: 15px 0 0;
         position: relative;
         text-align: center;
+    }
+
+    .drop-down-menu{
+        margin-left: 25px;
+        margin-bottom: 20px;
+        width: 250px;
+        font-size: 1rem;
+    }
+
+    .drop-down-menu-label{
+        width: 250px;
+    }
+
+    .level-menu{
+        width: 250px;
     }
 
     .module{
