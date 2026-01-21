@@ -95,8 +95,15 @@ linksContainerEls.forEach(el =>{
 const levelMenu = document.querySelector('.level-menu')
 const menuLabel = document.querySelector('.ddm-selected')
 
-menuLabel.addEventListener('click', ()=> {
+menuLabel.addEventListener('click', (e)=> {
+    e.stopPropagation()
     menuLabel.classList.toggle('active')
+})
+
+window.addEventListener('click', ()=>{
+    if(menuLabel.classList.contains('active')){
+        menuLabel.classList.remove('active')
+    }
 })
 
 //faqs logic

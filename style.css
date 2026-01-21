@@ -526,6 +526,11 @@ body::selection{
     font-weight: 500;
 }
 
+.email-input:focus, .name-input:focus, .message-input:focus{
+    outline: none;
+    border: 2px solid var(--accent-color);
+}
+
 .email-label, .message-label, .name-label{
     margin-right: auto;
     font-size: 1.2rem;
