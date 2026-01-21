@@ -12,6 +12,7 @@
     --accent-color: #bf60d4;
     --border-color: #454545;
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
 }
 
 body{
@@ -67,6 +68,8 @@ body::selection{
 
 .cta-buttons{
     margin-left: 90px;
+    display: flex;
+    align-items: center;
 }
 
 .cta-button{
@@ -125,7 +128,6 @@ body::selection{
     font-weight: 600;
     background-color: transparent;
     border: 3px solid var(--accent-color);
-    transform: translateY(-2px);
     padding: 17px 20px;
     margin-left: 60px;
     border-radius: 5px;
@@ -166,6 +168,7 @@ body::selection{
 .title-insight::after{
     right: -20%;
 }
+
 .modules-title{
     text-align: center;
     font-size: 3rem;
@@ -174,11 +177,11 @@ body::selection{
 
 .levels-container{
     max-width: fit-content;
-    margin: auto 0;
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-left: 30px;
+    justify-content: flex-start;
+    /* margin-left: 30px; */
 }
 
 .levels-label{
@@ -187,21 +190,23 @@ body::selection{
 }
 
 .drop-down-menu{
+    position: relative;
     margin-left: 20px;
-    /* margin-bottom: 20px; */
     font-size: 1.2rem;
     transition: ease 0.4s;
+    width: 255px
+
 }
 
 .ddm-selected{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     padding: 15px 15px 10px;
     background-color: #303030;
     color: var(--accent-color);
     font-weight: 900;
-    width: 270px;
     margin-bottom: 5px;
     cursor: pointer;
     border-radius: 5px;
@@ -209,50 +214,58 @@ body::selection{
     position: relative;
 }
 
-.ddm-toggle{
-    width: 30px;
-    height: 30px;
-}
-
-.ddm-toggle svg{
-    fill: var(--accent-color);
-    width: 100%;
-    height: 100%;
-}
-.ddm-toggle .angle-up{
-    display: none;
-}
-
-.ddm-selected.active .ddm-toggle .angle-up{
-    display: block;
-}
-.ddm-selected.active .ddm-toggle .angle-down{
-    display: none;
+.ddm-selected:hover{
+    background-color: #353535;
 }
 
 .level-menu{
     position: absolute;
+    top: 100%;
+    left: 0;
     background-color: #303030;
-    width: 270px;
-    display: none;
+    width: 255px;
+    max-height: 0;
     z-index: 3;
     border-radius: 5px;
+    padding: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+}
+
+
+.ddm-toggle{
+    width: auto;
+    margin-left: 5px;
+}
+
+.ddm-toggle svg{
+    display: block;
+    fill: #555;
+}
+
+.ddm-selected .angle-icon{
+    transition: ease 0.3s;
+}
+
+.ddm-selected.active .angle-icon{
+    transform: rotate(180deg);
 }
 
 .ddm-selected.active ~ .level-menu{
-    display: block;
+    max-height: 500px;
 }
 
 .level-menu li{
     list-style-type: none;
-    padding: 10px 15px;
+    padding: 12px 16px;
     display: flex;
     justify-content: space-between;
     border-radius: 5px;
     cursor: pointer;
     color: #ccc;
     font-weight: 600;
-    transform: ease-out 0.3s;
+    transition: ease-out 0.2s;
 }
 
 .level-menu li svg{
@@ -834,37 +847,47 @@ footer{
         text-align: center;
     }
 
-    .levels-container{
-        margin-bottom: 20px;
-        width: 100%;
+    .levels-container {
+        align-items: center;
+        margin: 0 auto; /* Pull it closer to the edge for mobile */
+        width: calc(100% - 30px); /* Ensures it doesn't overflow screen */
     }
 
     .levels-label{
-        font-size: 1.2rem;
-        margin: 0;
-    }
-    .drop-down-menu{
-        width: 250px;
         font-size: 1.1rem;
+        white-space: nowrap;
+        /* margin: 0 10px 0 0 */
     }
 
-    .ddm-selected{
-        width: 250px;
-        padding: 10px 10px 6px;
+    .drop-down-menu {
+        width: 100%; 
+        max-width: 260px; /* Limits size on slightly wider phones */
+        /* margin-left: 0; */
+        font-size: 1.05rem;
+    }
+    .ddm-selected {
+        width: 100%; /* Follows parent width */
+        padding: 9px 8px 4px 12px; /* Larger "tap" area for fingers */
+        /* white-space: nowrap; */
     }
 
     .ddm-selected:hover{
         background-color: #303030;
     }
 
-    .level-menu{
-        width: 250px;
+    .ddm-toggle{
+        width: auto;
     }
 
-    .level-menu li{
-        margin: 0;
+    .level-menu {
+        width: 100%; /* Matches the button exactly */
     }
-    
+
+    .level-menu li {
+        padding: 12px 7px 12px 15px; /* Even taller rows for easier selection */
+        margin: 0;
+    }    
+
     .module{
         width: 150px;
     }
@@ -967,7 +990,7 @@ footer{
 
     .cta-button-contact{
         font-size: 1rem;
-        padding: 15px 18px;
+        padding: 17px 18px;
         transform: translateY(11px);
     }
 
