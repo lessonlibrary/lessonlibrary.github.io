@@ -207,11 +207,15 @@ body::selection{
     background-color: #303030;
     color: var(--accent-color);
     font-weight: 900;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     cursor: pointer;
     border-radius: 5px;
     transition: ease-out 0.3s;
     position: relative;
+}
+
+.ddm-selected.active{
+    border-radius: 5px 5px 0 0;
 }
 
 .ddm-selected:hover{
@@ -253,6 +257,7 @@ body::selection{
 }
 
 .ddm-selected.active ~ .level-menu{
+    border-radius: 0 0 5px 5px;
     max-height: 500px;
 }
 
@@ -854,7 +859,7 @@ footer{
 
     .levels-container {
         align-items: center;
-        margin: 0 auto; /* Pull it closer to the edge for mobile */
+        margin: 0 auto 20px auto; /* Pull it closer to the edge for mobile */
         width: calc(100% - 30px); /* Ensures it doesn't overflow screen */
     }
 
@@ -872,7 +877,7 @@ footer{
     }
     .ddm-selected {
         width: 100%; /* Follows parent width */
-        padding: 9px 8px 4px 12px; /* Larger "tap" area for fingers */
+        padding: 9px 8px 6px 12px; /* Larger "tap" area for fingers */
         /* white-space: nowrap; */
     }
 
