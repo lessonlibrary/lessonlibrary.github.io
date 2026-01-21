@@ -179,7 +179,7 @@ body::selection{
     max-width: fit-content;
     display: flex;
     align-items: center;
-    margin-left: 30px;
+    margin: 0 0 20px 30px;
     justify-content: flex-start;
     /* margin-left: 30px; */
 }
@@ -874,6 +874,7 @@ footer{
         max-width: 260px; /* Limits size on slightly wider phones */
         /* margin-left: 0; */
         font-size: 1.05rem;
+        margin-left: 6px;
     }
     .ddm-selected {
         width: 100%; /* Follows parent width */
