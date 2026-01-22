@@ -6,7 +6,7 @@ const lessonsTagEl = document.querySelector('.lessons-tag-value');
 const navBtnsContainer = document.querySelector('.navigation-buttons-container');
 const lessonsContainerEl = document.querySelector('.lessons-container');
 const moduleHero = document.querySelector('.module-hero');
-const backBtn = document.querySelector('.back-btn'); // Added this
+const backBtn = document.querySelector('.back-btn');
 
 const modules = {
     'brit-am-civ': {
