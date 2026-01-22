@@ -93,19 +93,165 @@ linksContainerEls.forEach(el =>{
 //drop-down-menu logic
 
 const levelMenu = document.querySelector('.level-menu')
-const menuLabel = document.querySelector('.ddm-selected')
+const ddmSelected = document.querySelector('.ddm-selected')
+const ddmSelectedValue = document.querySelector('.ddm-selected-value')
 
-menuLabel.addEventListener('click', (e)=> {
+ddmSelected.addEventListener('click', (e)=> {
     e.stopPropagation()
-    menuLabel.classList.toggle('active')
+    ddmSelected.classList.toggle('active')
 })
 
 window.addEventListener('click', ()=>{
-    if(menuLabel.classList.contains('active')){
-        menuLabel.classList.remove('active')
+    if(ddmSelected.classList.contains('active')){
+        ddmSelected.classList.remove('active')
     }
 })
 
+//select level logic
+//module cards logic
+
+const levels = {
+    '1st': {
+        name: '1st Year PEM PES',
+        modules: [
+            { id: 'writing-1', title: 'Writing' }, 
+            { id: 'grammar-1', title: 'Grammar' },
+            { id: 'ph-phono-1', title: 'Ph & Phono' }, 
+            { id: 'linguistics-1', title: 'Linguistics' },
+            { id: 'ict-1', title: 'ICT' }, 
+            { id: 'reading-1', title: 'Reading' },
+            { id: 'culture-1', title: 'Culture Studies' }, 
+            { id: 'arabic-1', title: 'لغة عربية' }
+        ]
+    },
+    '2nd': {
+        name: '2nd Year PEM PES',
+        modules: [
+            { id: 'west-civ-lit', title: 'West. Civ/Lit' }, 
+            { id: 'grammar-2', title: 'Grammar' },
+            { id: 'ict-2', title: 'ICT' }, 
+            { id: 'ed-psych-2', title: 'علم ن التربوي' },
+            { id: 'linguistics-2', title: 'Linguistics' }, 
+            { id: 'reading-2', title: 'Reading' },
+            { id: 'phonetics-2', title: 'Phonetics' }, 
+            { id: 'writing-2', title: 'Writing' }
+        ]
+    },
+    '3rd': {
+        name: '3rd Year PEM PES',
+        modules: [
+            { id: 'brit-am-civ', title: 'Brit/Am Civ.' }, 
+            { id: 'gr-wr', title: 'Gr & Wr' },
+            { id: 'tefl', title: 'TEFL' }, 
+            { id: 'sp-ph', title: 'Sp & Ph' },
+            { id: 'ptes', title: 'PTES' }, 
+            { id: 'brit-am-lit', title: 'Brit/Am Lit' },
+            { id: 'ict', title: 'ICT' }, 
+            { id: 'intro-psycho', title: 'Intro. Psycho.' },
+            { id: 'linguistics', title: 'Linguistics' }
+        ]
+    },
+    '4th': {
+        name: '4th Year PEM PES',
+        modules: [
+            { id: 'psychopeda-4', title: 'Psychopeda.' }, 
+            { id: 'legislation-4', title: 'Legislation R/M' },
+            { id: 'brit-am-civ-4', title: 'Brit/Am Civ.' },
+            { id: 'af-civ-lit-4', title: 'Af. Civ/Lit' },        
+            { id: 'tbesd-4', title: 'TBESD' }, 
+            { id: 'app-ling-4', title: 'App. Ling.' },
+            { id: 'brit-am-lit-4', title: 'Brit/Am Li.' }, 
+            { id: 'tefl-4', title: 'TEFL' },
+            { id: 'mdd-4', title: 'MDD' }
+        ]
+    },
+    '5th': {
+        name: '5th Year PES',
+        modules: [
+            { id: 'issues-5', title: 'Issues in C.' }, 
+            { id: 'legislation-5', title: 'Legislation' },
+            { id: 'brit-am-lit-5', title: 'Brit/Am Lit.' }, 
+            { id: 'app-ling-5', title: 'App. Ling.' },        
+            { id: 'syll-des-5', title: 'Syll. Des.' }, 
+            { id: 'brit-am-civ-5', title: 'Brit/Am Civ.' },
+            { id: 'pedagogy-5', title: 'Pedagogy' }, 
+            { id: 'af-civ-lit-5', title: 'Af. Civ/Lit' }
+        ]
+    }
+};
+
+const levelItems = document.querySelectorAll('.level-menu > li')
+
+levelItems.forEach((levelItem) =>{
+    levelItem.addEventListener('click', ()=>{
+
+        levelItems.forEach(levelItem => levelItem.classList.remove('level-selected'))
+        levelItem.classList.add('level-selected')
+
+        levelId = levelItem.getAttribute('data-id')
+        const selectedLevel = levels[levelId]
+        ddmSelectedValue.innerText = selectedLevel.name
+
+        // 3. URL: Change the link in the browser bar without refreshing
+        const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?l=' + levelId;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+
+        // 4. Action: Generate the cards
+        renderModules(levelId);
+        
+    })
+})
+
+// RENDER MODULE CARDS
+function renderModules(levelId) {
+    const modulesContainer = document.querySelector('.modules');
+    if (!modulesContainer) return;
+
+    modulesContainer.innerHTML = ''; 
+    const selectedLevel = levels[levelId];
+
+    if (selectedLevel && selectedLevel.modules) {
+        selectedLevel.modules.forEach((moduleData, index) => {
+            const moduleCard = document.createElement('a');
+            
+            // 1. CLASS & LINK LOGIC
+            const overlayClass = `l-${levelId}-m${index + 1}`;
+            moduleCard.classList.add('module', overlayClass);
+            
+            const mId = moduleData.id || moduleData.title.toLowerCase().replace(/\s+/g, '-').replace(/\./g, '');
+            moduleCard.href = `module.html?module=${mId}&l=${levelId}`;
+
+            // 2. DYNAMIC SRC LOGIC
+            // Looks for: pictures/3rd/l-3rd-m1.jpg
+            const specificPic = `pictures/${levelId}/${overlayClass}.jpg`;
+            // Fallback: pictures/3rd.jpg
+            const fallbackPic = `pictures/${levelId}.jpg`;
+
+            // 3. INJECT HTML
+            // 'onerror' is the magic: if specificPic doesn't exist, it swaps to fallbackPic
+            moduleCard.innerHTML = `
+                <img src="${specificPic}" 
+                     onerror="this.onerror=null; this.src='${fallbackPic}';" 
+                     alt="${moduleData.title}">
+                <span>${moduleData.title}</span>
+            `;
+            
+            modulesContainer.appendChild(moduleCard);
+        });
+    }
+}
+// LEVEL SELECTION LOGIC
+levelItems.forEach((levelItem) => {
+    levelItem.addEventListener('click', () => {
+        const levelId = levelItem.getAttribute('data-id');
+        ddmSelectedValue.innerText = levels[levelId].name;
+        
+        // Update URL and render
+        const newUrl = `${window.location.pathname}?l=${levelId}`;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+        renderModules(levelId);
+    });
+});
 //faqs logic
 
 const faqHeaders = document.querySelectorAll('.faq-header')
@@ -143,3 +289,16 @@ faqHeaders.forEach(faqHeader =>{
         }
     })
 })
+
+
+// On page load, check if a level is already in the URL
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const levelParam = params.get('l');
+
+    if (levelParam && levels[levelParam]) {
+        // Find the specific LI and click it automatically
+        const autoTarget = document.querySelector(`.level-menu > li[data-id="${levelParam}"]`);
+        if (autoTarget) autoTarget.click();
+    }
+});
