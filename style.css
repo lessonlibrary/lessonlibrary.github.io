@@ -449,6 +449,10 @@ body::selection{
     padding: 0 25px;
 }
 
+.warning{
+    color: rgb(238, 46, 46)
+}
+
 .faq-header.active ~ .faq-body{
     max-height: 300px;
     opacity: 1;
