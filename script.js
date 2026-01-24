@@ -115,10 +115,10 @@ const levels = {
         name: '1st Year PEM PES',
         modules: [
             { id: 'writing-1', title: 'Writing' }, 
-            { id: 'grammar-1', title: 'Grammar' },
+            { id: 'ict-1', title: 'ICT' }, 
             { id: 'ph-phono-1', title: 'Ph & Phono' }, 
             { id: 'linguistics-1', title: 'Linguistics' },
-            { id: 'ict-1', title: 'ICT' }, 
+            { id: 'grammar-1', title: 'Grammar' },
             { id: 'reading-1', title: 'Reading' },
             { id: 'culture-1', title: 'Culture Studies' }, 
             { id: 'arabic-1', title: 'لغة عربية' }
