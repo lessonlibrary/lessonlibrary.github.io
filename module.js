@@ -9,30 +9,30 @@ const moduleHero = document.querySelector('.module-hero');
 const backBtn = document.querySelector('.back-btn');
 
 const modules = {
-    'arabic-1':{
-        title: 'Arabic',
-        coefTag: 1,
-        examTag: 'MM DD',
-        // bgImage: 'pictures/m1.jpg',
-        lessons: [
-            {
-                title: `Arabic lesson n1`,
-                content: `asdlfkj`
-            },
-        ],
-    },
-        'west-civ-lit':{
-        title: 'Western Civilization & Literature',
-        coefTag: 1,
-        examTag: 'MM DD',
-        // bgImage: 'pictures/m1.jpg',
-        lessons: [
-            {
-                title: `Arabic lesson n1`,
-                content: `asdlfkj`
-            },
-        ],
-    },
+    // 'arabic-1':{
+    //     title: 'Arabic',
+    //     coefTag: 1,
+    //     examTag: 'MM DD',
+    //     bgImage: 'pictures/m1.jpg',
+    //     lessons: [
+    //         {
+    //             title: `Arabic lesson n1`,
+    //             content: `asdlfkj`
+    //         },
+    //     ],
+    // },
+    //     'west-civ-lit':{
+    //     title: 'Western Civilization & Literature',
+    //     coefTag: 1,
+    //     examTag: 'MM DD',
+    //     bgImage: 'pictures/m1.jpg',
+    //     lessons: [
+    //         {
+    //             title: `Arabic lesson n1`,
+    //             content: `asdlfkj`
+    //         },
+    //     ],
+    // },
     'brit-am-civ': {
         title: 'British / American Civilization',
         coefTag: 5,
