@@ -44,7 +44,7 @@
     transform: translateY(3px);
     /* margin-right: px; */
 }
-.exam-tag{
+.level-tag{
     background-color: #ffe4e1cd;
     color:#991b1b;
 }
@@ -154,7 +154,15 @@
     }
 }
 
-@media(max-width: 550px) {
+
+@media(min-width: 359px) {
+    .tag{
+        font-size: 0.8rem;
+    }
+
+}
+
+@media(min-width: 360px) and (max-width: 500px){
     .module-hero-title{
         margin: 5px 10px 10px;
         font-size: 1.8rem;
@@ -162,20 +170,21 @@
     .tags-container{
         margin: 3px;
     }
-    
+    .tag{
+        padding-top: 0;
+    }
+    .tag svg{
+    transform: translateY(4px);
+    }
+    .lesson{
+        max-width: 100%;
+    }
+
     .navigation-buttons-container{
         margin: 3px auto;        
     }
 
 }
-
-@media(max-width: 400px) {
-    .tag{
-        font-size: 0.8rem;
-    }
-
-}
-
 
 
 

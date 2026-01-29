@@ -208,6 +208,7 @@ body::selection{
     font-weight: 900;
     margin-bottom: 1px;
     cursor: pointer;
+    /* border: 1px solid #444; */
     border-radius: 5px;
     transition: ease-out 0.3s;
     position: relative;
@@ -362,10 +363,10 @@ body::selection{
 .module.l-1st-m7::after {background-color: #ff0000; opacity: 0.6;}
 .module.l-1st-m8::after {background-color: #1b1b1bc1;}
 
-.module.l-2nd-m1::after {background-color: #b72313;}
+.module.l-2nd-m1::after {background-color: #c4665c;}
 .module.l-2nd-m2::after {background-color: #f4df23;}
 .module.l-2nd-m3::after {background-color: #23aef4; opacity: 0.6;}
-.module.l-2nd-m4::after {background-color: #1d022d;}
+.module.l-2nd-m4::after {background-color: #0051ff;}
 .module.l-2nd-m5::after {background-color: #1d022d;}
 .module.l-2nd-m6::after {background-color: #3b1258;}
 .module.l-2nd-m7::after {background-color: #19721c;}

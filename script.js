@@ -65,16 +65,19 @@ injectComponents()
 const goTopBtn = document.querySelector('.go-top')
 
 // the go up button yaay!
-window.addEventListener('scroll', ()=>{
-    scrollY > 500 ? goTopBtn.style.opacity = '1' : goTopBtn.style.opacity = '0'
-})
-
-goTopBtn.addEventListener('click', ()=>{
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
+if(goTopBtn){
+    window.addEventListener('scroll', ()=>{
+        scrollY > 500 ? goTopBtn.style.opacity = '1' : goTopBtn.style.opacity = '0'
     })
-})
+
+    goTopBtn.addEventListener('click', ()=>{
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
+    })
+
+}
 
 // navigation bar
 
@@ -96,10 +99,12 @@ const levelMenu = document.querySelector('.level-menu')
 const ddmSelected = document.querySelector('.ddm-selected')
 const ddmSelectedValue = document.querySelector('.ddm-selected-value')
 
-ddmSelected.addEventListener('click', (e)=> {
-    e.stopPropagation()
-    ddmSelected.classList.toggle('active')
-})
+if(ddmSelected){
+    ddmSelected.addEventListener('click', (e)=> {
+        e.stopPropagation()
+        ddmSelected.classList.toggle('active')
+    })
+}
 
 window.addEventListener('click', ()=>{
     if(ddmSelected.classList.contains('active')){
@@ -114,41 +119,411 @@ const levels = {
     '1st': {
         name: '1st Year PEM PES',
         modules: [
-            { id: 'writing-1', title: 'Writing' }, 
-            { id: 'ict-1', title: 'ICT' }, 
-            { id: 'ph-phono-1', title: 'Ph & Phono' }, 
-            { id: 'linguistics-1', title: 'Linguistics' },
-            { id: 'grammar-1', title: 'Grammar' },
-            { id: 'reading-1', title: 'Reading' },
-            { id: 'culture-1', title: 'Culture Studies' }, 
-            { id: 'arabic-1', title: 'لغة عربية' }
+            { 
+                id: 'writing-1',
+                title: 'Writing',
+                moduleTitle: 'Writing',
+                coefTag: 0,
+                levelTag: '1ST',
+                lessons: [],
+
+            }, 
+            { 
+                id: 'ict-1',
+                title: 'ICT',
+                moduleTitle: 'Information and Communication Technology (ICT)',
+                coefTag: 0,
+                levelTag: '1ST',
+                lessons: [],
+            }, 
+            { 
+                id: 'ph-phono-1',
+                 title: 'Ph & Phono',
+                moduleTitle: 'Phonetics and Phonology',
+                coefTag: 0,
+                levelTag: '1ST',
+                lessons: [],
+
+            }, 
+            { 
+                id: 'linguistics-1',
+                title: 'Linguistics',
+                moduleTitle: 'Linguistics',
+                coefTag: 0,
+                levelTag: '1ST',
+                lessons: [],
+            },
+            { 
+                id: 'grammar-1',
+                title: 'Grammar',
+                moduleTitle: 'Grammar',
+                coefTag: 0,
+                levelTag: '1ST',
+                lessons: [],
+
+            },
+            { 
+                id: 'reading-1',
+                title: 'Reading',
+                moduleTitle: 'Reading',
+                coefTag: 0,
+                levelTag: '1ST',
+                lessons: [],
+            },
+            { 
+                id: 'culture-1',
+                title: 'Culture Studies',
+                moduleTitle: 'Culture Studies',
+                coefTag: 0,
+                levelTag: '1ST',
+                lessons: [],
+            }, 
+            { 
+                id: 'arabic-1',
+                title: 'لغة عربية',
+                moduleTitle: 'لغة عربية',
+                coefTag: 0,
+                levelTag: '1ST',
+                lessons: [], 
+            }
         ]
     },
     '2nd': {
         name: '2nd Year PEM PES',
         modules: [
-            { id: 'west-civ-lit', title: 'West. Civ/Lit' }, 
-            { id: 'grammar-2', title: 'Grammar' },
-            { id: 'ict-2', title: 'ICT' }, 
-            { id: 'ed-psych-2', title: 'علم ن التربوي' },
-            { id: 'linguistics-2', title: 'Linguistics' }, 
-            { id: 'reading-2', title: 'Reading' },
-            { id: 'phonetics-2', title: 'Phonetics' }, 
-            { id: 'writing-2', title: 'Writing' }
+            { 
+                id: 'west-civ-lit-2',
+                title: 'West. Civ/Lit',
+                moduleTitle: 'Western Civilization & Literature',
+                coefTag: 0,
+                levelTag: '2ND',
+                lessons: [],
+            }, 
+            { 
+                id: 'grammar-2',
+                title: 'Grammar',
+                moduleTitle: 'Grammar',
+                coefTag: 0,
+                levelTag: '2ND',
+                lessons: [],
+            },
+            { 
+                id: 'ict-2',
+                title: 'ICT',
+                moduleTitle: 'Information and Communicatoin Technology',
+                coefTag: 0,
+                levelTag: '2ND',
+                lessons: [],
+            }, 
+            { 
+                id: 'ed-psych-2',
+                title: 'علم ن التربوي',
+                moduleTitle: 'علم النفس التربوي',
+                coefTag: 0,
+                levelTag: '2ND',
+                lessons: [],
+            },
+            { 
+                id: 'linguistics-2',
+                title: 'Linguistics',
+                moduleTitle: 'Linguistics',
+                coefTag: 0,
+                levelTag: '2ND',
+                lessons: [],
+            }, 
+            { 
+                id: 'reading-2',
+                title: 'Reading',
+                moduleTitle: 'Reading',
+                coefTag: 0,
+                levelTag: '2ND',
+                lessons: [],
+            },
+            { 
+                id: 'phonetics-2',
+                title: 'Phonetics',
+                moduleTitle: 'Phonetics',
+                coefTag: 1,
+                levelTag: '2ND',
+                lessons: [],
+            }, 
+            { 
+                id: 'writing-2',
+                title: 'Writing',
+                moduleTitle: 'Writing',
+                coefTag: 0,
+                examTag: '2ND',
+                lessons: [],
+
+            }
         ]
     },
     '3rd': {
         name: '3rd Year PEM PES',
         modules: [
-            { id: 'brit-am-civ', title: 'Brit/Am Civ.' }, 
-            { id: 'gr-wr', title: 'Gr & Wr' },
-            { id: 'tefl', title: 'TEFL' }, 
-            { id: 'sp-ph', title: 'Sp & Ph' },
-            { id: 'ptes', title: 'PTES' }, 
-            { id: 'brit-am-lit', title: 'Brit/Am Lit' },
-            { id: 'ict', title: 'ICT' }, 
-            { id: 'intro-psycho', title: 'Intro. Psycho.' },
-            { id: 'linguistics', title: 'Linguistics' }
+            { 
+                id: 'brit-am-civ-3',
+                title: 'Brit/Am Civ.',
+                moduleTitle: 'British / American Literature',
+                coefTag: 5,
+                levelTag: '3RD',
+                bgImage: 'pictures/m1.jpg',
+                lessons: [
+                    {
+                        title: `Famous American Assasinations`,
+                        content: `
+                                <h2>Famous American Assassinations</h2>
+
+                                <div class="preamble-quote">
+                                    An assassination is the killing of an important public figure.
+                                    In the United States, some assassinations shocked the nation
+                                    and changed history forever.
+                                </div>
+
+                                <!-- Card -->
+                                <div class="article-section" style="background:#333; padding:20px; border-radius:10px; margin-bottom:25px;">
+                                    <h3>Abraham Lincoln (1865)</h3>
+
+                                    <h4>Who was he?</h4>
+                                    <p>
+                                    Abraham Lincoln was the 16th president of the United States.
+                                    He led the country during the Civil War
+                                    (a war between the North and the South).
+                                    </p>
+
+                                    <h4>Why was he important?</h4>
+                                    <p>
+                                    Lincoln believed the country should stay united.
+                                    He also worked to end slavery
+                                    (slavery = owning people and forcing them to work).
+                                    </p>
+
+                                    <h4>What happened after?</h4>
+                                    <p>
+                                    His death created political chaos
+                                    (chaos = confusion and loss of control).
+                                    The country struggled to heal.
+                                    </p>
+                                </div>
+
+                                <!-- Card -->
+                                <div class="article-section" style="background:#333; padding:20px; border-radius:10px; margin-bottom:25px;">
+                                    <h3>John F. Kennedy (1963)</h3>
+
+                                    <h4>The time he lived in</h4>
+                                    <p>
+                                    Kennedy lived during the Cold War
+                                    (Cold War = tension between powerful countries without direct fighting).
+                                    </p>
+
+                                    <h4>Why people admired him</h4>
+                                    <p>
+                                    He was young, confident, and optimistic
+                                    (optimistic = believing the future will be better).
+                                    </p>
+
+                                    <h4>Impact</h4>
+                                    <p>
+                                    After his assassination, many Americans lost trust in the government.
+                                    Trust never fully returned.
+                                    </p>
+                                </div>
+
+                                <!-- Card -->
+                                <div class="article-section" style="background:#333; padding:20px; border-radius:10px; margin-bottom:25px;">
+                                    <h3>Malcolm X (1965)</h3>
+
+                                    <h4>His role</h4>
+                                    <p>
+                                    Malcolm X was a strong and direct speaker.
+                                    He talked about racism
+                                    (racism = unfair treatment based on skin color).
+                                    </p>
+
+                                    <h4>His ideas</h4>
+                                    <p>
+                                    He believed Black Americans should protect themselves.
+                                    His ideas were radical
+                                    (radical = very strong and different from the norm).
+                                    </p>
+
+                                    <h4>Impact</h4>
+                                    <p>
+                                    His assassination removed an important voice,
+                                    but his ideas continued to influence future movements.
+                                    </p>
+                                </div>
+
+                                <!-- Card -->
+                                <div class="article-section" style="background:#333; padding:20px; border-radius:10px; margin-bottom:25px;">
+                                    <h3>Martin Luther King Jr. (1968)</h3>
+
+                                    <h4>Who he was</h4>
+                                    <p>
+                                    Martin Luther King Jr. was a civil rights leader
+                                    (civil rights = equal rights for all citizens).
+                                    </p>
+
+                                    <h4>His method</h4>
+                                    <p>
+                                    He believed in non-violence
+                                    (non-violence = no physical harm).
+                                    He used speeches and peaceful protests.
+                                    </p>
+
+                                    <h4>Impact</h4>
+                                    <p>
+                                    His death caused nationwide grief
+                                    (grief = deep sadness),
+                                    but also led to stronger civil rights laws.
+                                    </p>
+                                </div>
+
+                                <!-- Summary Table -->
+                                <h3>Quick Summary</h3>
+
+                                <table>
+                                    <tr>
+                                    <th>Person</th>
+                                    <th>Year</th>
+                                    <th>Main Idea</th>
+                                    <th>Result</th>
+                                    </tr>
+                                    <tr>
+                                    <td>Abraham Lincoln</td>
+                                    <td>1865</td>
+                                    <td>Unity & ending slavery</td>
+                                    <td>Nation stayed divided</td>
+                                    </tr>
+                                    <tr>
+                                    <td>John F. Kennedy</td>
+                                    <td>1963</td>
+                                    <td>Hope & progress</td>
+                                    <td>Loss of trust</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Malcolm X</td>
+                                    <td>1965</td>
+                                    <td>Self-defense & pride</td>
+                                    <td>Stronger identity movements</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Martin Luther King Jr.</td>
+                                    <td>1968</td>
+                                    <td>Peaceful equality</td>
+                                    <td>Civil rights laws</td>
+                                    </tr>
+                                </table>
+                        `
+                    }
+                ],
+            }, 
+            {
+                id: 'gr-wr-3',
+                title: 'Gr & Wr',
+                moduleTitle: 'Grammar and Writing',
+                coefTag: 3,
+                levelTag: '3RD',
+                bgImage: 'pictures/m2.jpg',
+                lessons:[
+                ],
+            },
+            {
+                id: 'tefl-3',
+                title: 'TEFL' ,
+                moduleTitle: 'Teaching English as a Foreign Language (TEFL)',
+                coefTag: 1,
+                levelTag: '3RD',
+                lessons:[
+                ],
+
+            }, 
+            {
+                id: 'sp-ph-3',
+                title: 'Sp & Ph',
+                moduleTitle: 'Speaking and Phonetics',
+                coefTag: 1,
+                levelTag: '3RD',
+                lessons:[
+
+                ],
+
+            },
+            { 
+                id: 'ptes-3',
+                title: 'PTES',
+                moduleTitle: 'Philosophy & Theory of Education System (PTES)',
+                coefTag: 1,
+                levelTag: '3RD',
+                lessons:[],
+
+            }, 
+            {   
+                id: 'brit-am-lit-3',
+                title: 'Brit/Am Lit',
+                moduleTitle: 'British / American Literature',
+                coefTag: 1,
+                levelTag: '3RD',
+                lessons:[],
+            },
+            { 
+                id: 'ict-3',
+                title: 'ICT',
+                moduleTitle: 'Information and Communication Technology (ICT)',
+                coefTag: 3,
+                levelTag: '3RD',
+                lessons: [
+                    {
+                        title: '//title one goes here',
+                        content: `
+                            //lesson content goes here
+                        `
+                },
+                    {
+                        title: `//lesson 2 title goes here`,
+                        content: `//lesson 2 content goes here`
+                    },
+                                {
+                        title: `//lesson 3 title goes here`,
+                        content: `//lesson 3 content goes here`
+                    },
+                    {
+                        title: `//lesson 4 title goes here`,
+                        content: `//lesson 4 content goes here`
+                    },
+                    {
+                        title: `//lesson 5 title goes here`,
+                        content: `//lesson 5 content goes here`
+                    },
+                    {
+                        title: `//lesson 6 title goes here`,
+                        content: `//lesson 6 content goes here`
+                    }
+                ],
+
+            }, 
+            { 
+                id: 'intro-psycho-3',
+                title: 'Intro. Psycho.',
+                moduleTitle: 'Introduction to Psychology',
+                coefTag: 4,
+                levelTag: '3RD',
+                lessons:[
+                    {
+                        title: 'Nature vs. Nurture',
+                        content: ``
+                    }
+                ],
+
+            },
+            {
+                id: 'linguistics-3',
+                title: 'Linguistics',
+                moduleTitle: 'Linguistics',
+                coefTag: 8,
+                levelTag: '3RD',
+                lessons:[],
+            }
         ]
     },
     '4th': {
@@ -188,7 +563,7 @@ levelItems.forEach((levelItem) =>{
         levelItems.forEach(levelItem => levelItem.classList.remove('level-selected'))
         levelItem.classList.add('level-selected')
 
-        levelId = levelItem.getAttribute('data-id')
+        const levelId = levelItem.getAttribute('data-id') /// there was an error here.
         const selectedLevel = levels[levelId]
         ddmSelectedValue.innerText = selectedLevel.name
 
@@ -205,10 +580,10 @@ levelItems.forEach((levelItem) =>{
 // RENDER MODULE CARDS
 function renderModules(levelId) {
     const modulesContainer = document.querySelector('.modules');
-    if (!modulesContainer) return;
+    if (!modulesContainer) return; /// what does this do? what happens when there's no modulesContainer
 
     modulesContainer.innerHTML = ''; 
-    const selectedLevel = levels[levelId];
+    const selectedLevel = levels[levelId]; // repeated in the function above, i think it's better if it's declared in the global scope
 
     if (selectedLevel && selectedLevel.modules) {
         selectedLevel.modules.forEach((moduleData, index) => {
@@ -218,21 +593,17 @@ function renderModules(levelId) {
             const overlayClass = `l-${levelId}-m${index + 1}`;
             moduleCard.classList.add('module', overlayClass);
             
-            const mId = moduleData.id || moduleData.title.toLowerCase().replace(/\s+/g, '-').replace(/\./g, '');
+            const mId = moduleData.id;
             moduleCard.href = `module.html?module=${mId}&l=${levelId}`;
 
             // 2. DYNAMIC SRC LOGIC
             // Looks for: pictures/3rd/l-3rd-m1.jpg
-            const specificPic = `pictures/${levelId}/${overlayClass}.jpg`;
-            // Fallback: pictures/3rd.jpg
-            const fallbackPic = `pictures/${levelId}.jpg`;
+            const moduleBg = `pictures/${levelId}/${overlayClass}.jpg`;
 
             // 3. INJECT HTML
             // 'onerror' is the magic: if specificPic doesn't exist, it swaps to fallbackPic
             moduleCard.innerHTML = `
-                <img src="${specificPic}" 
-                     onerror="this.onerror=null; this.src='${fallbackPic}';" 
-                     alt="${moduleData.title}">
+                <img src="${moduleBg}">
                 <span>${moduleData.title}</span>
             `;
             
