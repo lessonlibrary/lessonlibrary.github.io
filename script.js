@@ -252,7 +252,7 @@ const levels = {
                 title: 'Writing',
                 moduleTitle: 'Writing',
                 coefTag: 0,
-                examTag: '2ND',
+                levelTag: '2ND',
                 lessons: [],
 
             }
@@ -529,15 +529,80 @@ const levels = {
     '4th': {
         name: '4th Year PEM PES',
         modules: [
-            { id: 'psychopeda-4', title: 'Psychopeda.' }, 
-            { id: 'legislation-4', title: 'Legislation R/M' },
-            { id: 'brit-am-civ-4', title: 'Brit/Am Civ.' },
-            { id: 'af-civ-lit-4', title: 'Af. Civ/Lit' },        
-            { id: 'tbesd-4', title: 'TBESD' }, 
-            { id: 'app-ling-4', title: 'App. Ling.' },
-            { id: 'brit-am-lit-4', title: 'Brit/Am Li.' }, 
-            { id: 'tefl-4', title: 'TEFL' },
-            { id: 'mdd-4', title: 'MDD' }
+            {
+                id: 'psychopeda-4',
+                title: 'Psychopeda.',
+                moduleTitle: 'Psychopedia',
+                coefTag: 8,
+                levelTag: '4TH',
+                lessons:[],
+            }, 
+            { 
+                id: 'legislation-4',
+                title: 'Legislation R/M',
+                moduleTitle: 'Legislation',
+                coefTag: 8,
+                levelTag: '4TH',
+                lessons:[],
+            },
+            { 
+                id: 'brit-am-civ-4',
+                title: 'Brit/Am Civ.',
+                moduleTitle: 'British / American Civilization',
+                coefTag: 8,
+                levelTag: '4TH',
+                lessons:[],
+
+            },
+            { 
+                id: 'af-civ-lit-4',
+                title: 'Af. Civ/Lit',
+                moduleTitle: 'African Civlization & Literature',
+                coefTag: 8,
+                levelTag: '4TH',
+                lessons:[],
+            },        
+            { 
+                id: 'tbesd-4',
+                title: 'TBESD',
+                moduleTitle: 'TBESD (acro)',
+                coefTag: 8,
+                levelTag: '4TH',
+                lessons:[],
+
+            }, 
+            { 
+                id: 'app-ling-4',
+                title: 'App. Ling.',
+                moduleTitle: 'Applied Linguistics',
+                coefTag: 8,
+                levelTag: '4TH',
+                lessons:[],
+            },
+            { 
+                id: 'brit-am-lit-4',
+                title: 'Brit/Am Li.',
+                moduleTitle: 'British / American Literature',
+                coefTag: 8,
+                levelTag: '4TH',
+                lessons:[],
+            }, 
+            { 
+                id: 'tefl-4',
+                title: 'TEFL',
+                moduleTitle: 'Teaching English as a Foreign Language',
+                coefTag: 8,
+                levelTag: '4TH',
+                lessons:[],
+            },
+            { 
+                id: 'mdd-4',
+                title: 'MDD',
+                moduleTitle: 'MDD (acro)',
+                coefTag: 8,
+                levelTag: '4TH',
+                lessons:[],
+            }
         ]
     },
     '5th': {
