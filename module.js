@@ -1,84 +1,83 @@
-// 1. SELECTORS
-const moduleTitleEl = document.querySelector('.module-hero-title');
-const coefTagEl = document.querySelector('.coef-tag-value');
-const levelTagEl = document.querySelector('.level-tag-value');
-const lessonsTagEl = document.querySelector('.lessons-tag-value');
-const navBtnsContainer = document.querySelector('.navigation-buttons-container');
-const lessonsContainerEl = document.querySelector('.lessons-container');
-const moduleHero = document.querySelector('.module-hero');
-const backBtn = document.querySelector('.back-btn');
+function initModulePage(){
+    // 1. SELECTORS
+    const moduleTitleEl = document.querySelector('.module-hero-title');
+    const coefTagEl = document.querySelector('.coef-tag-value');
+    const levelTagEl = document.querySelector('.level-tag-value');
+    const lessonsTagEl = document.querySelector('.lessons-tag-value');
+    const navBtnsContainer = document.querySelector('.navigation-buttons-container');
+    const lessonsContainerEl = document.querySelector('.lessons-container');
+    const moduleHero = document.querySelector('.module-hero');
+    const backBtn = document.querySelector('.back-btn');
 
-// 2. PARAMS
-const queryString = window.location.search;
-const params = new URLSearchParams(queryString);
-const moduleId = params.get('module');
-const levelId = params.get('l'); // Expected values: '1st', '2nd', etc.
+    // 2. PARAMS
+    const queryString = window.location.search;
+    const params = new URLSearchParams(queryString);
+    const moduleId = params.get('module');
+    const levelId = params.get('l'); // Expected values: '1st', '2nd', etc.
 
-// 3. BACK BUTTON FIX
-if (backBtn && levelId) {
-    backBtn.href = `index.html?l=${levelId}#study-now`;
-}
-
-// 4. FIND MODULE INDEX (For Dynamic Image Naming)
-
-// We get the keys of the modules object to find which number this module is
-const selectedLevel = levels[levelId];
-const selectedModuleIndex = selectedLevel.modules.findIndex(m => m.id === moduleId);
-const selectedModule = selectedLevel.modules[selectedModuleIndex];
-const moduleIndex = selectedModuleIndex + 1; // for image path
-
-if (selectedModule) {
-    // 1. CONTENT INJECTION
-    moduleTitleEl.innerText = selectedModule.moduleTitle;
-    coefTagEl.innerText = selectedModule.coefTag;
-    levelTagEl.innerText = selectedModule.levelTag;
-    lessonsTagEl.innerText = selectedModule.lessons.length;
-
-    console.log({ moduleId, selectedModuleIndex, selectedModule });
-
-    // Path becomes: pictures/1st/l-1st-m1.jpg
-    if (levelId && moduleIndex > 0) {
-        const imagePath = `pictures/${levelId}/l-${levelId}-m${moduleIndex}.jpg`;
-        moduleHero.style.backgroundImage = `url(${imagePath})`;
+    // 3. BACK BUTTON FIX
+    if (backBtn && levelId) {
+        backBtn.href = `index.html?l=${levelId}#study-now`;
     }
 
-    // 3. LESSON RENDERING & NAVIGATION FIX
-    if (selectedModule.lessons.length > 0) {
-        selectedModule.lessons.forEach((lesson, idx) => {
-            // Create Lesson Content Div
-            const lessonDiv = document.createElement('div');
-            lessonDiv.classList.add('lesson');
-            if (idx === 0) lessonDiv.classList.add('active');
-            lessonDiv.innerHTML = lesson.content;
-            lessonsContainerEl.appendChild(lessonDiv);
+    // 4. FIND MODULE INDEX (For Dynamic Image Naming)
 
-            // Create Nav Button
-            const navBtnEl = document.createElement('button');
-            navBtnEl.classList.add('nav-btn');
-            if (idx === 0) navBtnEl.classList.add('active');
-            navBtnEl.innerText = `${(idx + 1).toString().padStart(2, '0')}. ${lesson.title}`;
-            navBtnsContainer.appendChild(navBtnEl);
+    // We get the keys of the modules object to find which number this module is
+    const selectedLevel = levels[levelId];
+    const selectedModuleIndex = selectedLevel.modules.findIndex(m => m.id === moduleId);
+    const selectedModule = selectedLevel.modules[selectedModuleIndex];
+    const moduleIndex = selectedModuleIndex + 1; // for image path
 
-            // FIX: Added Event Listener to handle switching
-            navBtnEl.addEventListener('click', () => {
-                // Remove active class from all buttons and lessons
-                document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
-                document.querySelectorAll('.lesson').forEach(les => les.classList.remove('active'));
-                
-                // Add active class to clicked button and corresponding lesson
-                navBtnEl.classList.add('active');
-                lessonDiv.classList.add('active');
-                
-                // Scroll to top
-                navBtnEl.scrollIntoView({
-                    behavior: 'smooth',
-                    inline: 'center', 
-                    block: 'nearest',
+    if (selectedModule) {
+        // 1. CONTENT INJECTION
+        moduleTitleEl.innerText = selectedModule.moduleTitle;
+        coefTagEl.innerText = selectedModule.coefTag;
+        levelTagEl.innerText = levelId.toUpperCase();
+        lessonsTagEl.innerText = selectedModule.lessons.length;
+        document.title = `${selectedModule.title} ${levelId} Year`
+        // Path becomes: pictures/1st/l-1st-m1.jpg
+        if (levelId && moduleIndex > 0) {
+            const imagePath = `pictures/${levelId}/l-${levelId}-m${moduleIndex}.jpg`;
+            moduleHero.style.backgroundImage = `url(${imagePath})`;
+        }
 
-                })
+        // 3. LESSON RENDERING & NAVIGATION FIX
+        if (selectedModule.lessons.length > 0) {
+            selectedModule.lessons.forEach((lesson, idx) => {
+                // Create Lesson Content Div
+                const lessonDiv = document.createElement('div');
+                lessonDiv.classList.add('lesson');
+                if (idx === 0) lessonDiv.classList.add('active');
+                lessonDiv.innerHTML = lesson.content;
+                lessonsContainerEl.appendChild(lessonDiv);
+
+                // Create Nav Button
+                const navBtnEl = document.createElement('button');
+                navBtnEl.classList.add('nav-btn');
+                if (idx === 0) navBtnEl.classList.add('active');
+                navBtnEl.innerText = `${(idx + 1).toString().padStart(2, '0')}. ${lesson.title}`;
+                navBtnsContainer.appendChild(navBtnEl);
+
+                // FIX: Added Event Listener to handle switching
+                navBtnEl.addEventListener('click', () => {
+                    // Remove active class from all buttons and lessons
+                    document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+                    document.querySelectorAll('.lesson').forEach(les => les.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding lesson
+                    navBtnEl.classList.add('active');
+                    lessonDiv.classList.add('active');
+                    
+                    //scroll into view
+                    navBtnEl.scrollIntoView({
+                        behavior: 'smooth',
+                        inline: 'center', 
+                        block: 'nearest',
+                    })
+                });
             });
-        });
+        }
+    } else {
+        moduleTitleEl.innerText = "Module not found.";
     }
-} else {
-    moduleTitleEl.innerText = "Module not found.";
 }
