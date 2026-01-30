@@ -355,7 +355,7 @@ body::selection{
 
 .module.l-1st-m1::after {background-color: #ba2121;}
 .module.l-1st-m2::after {background-color: #23aef4; opacity: 0.6;}
-.module.l-1st-m3::after {background-color: #19721c;}
+.module.l-1st-m3::after {background-color: #194a72;}
 .module.l-1st-m4::after {background-color: #1d022d;}
 .module.l-1st-m5::after {background-color: #f4df23;}
 .module.l-1st-m6::after {background-color: #3b1258;}
@@ -367,7 +367,7 @@ body::selection{
 .module.l-2nd-m3::after {background-color: #23aef4; opacity: 0.6;}
 .module.l-2nd-m4::after {background-color: #0051ff;}
 .module.l-2nd-m5::after {background-color: #1d022d;}
-.module.l-2nd-m6::after {background-color: #3b1258;}
+.module.l-2nd-m6::after {background-color: #d31717;}
 .module.l-2nd-m7::after {background-color: #19721c;}
 .module.l-2nd-m8::after {background-color: #ba2121;}
 
@@ -455,10 +455,6 @@ body::selection{
     opacity: 0;
     transition: max-height 0.4s ease, opacity 0.2s ease, padding 0.3s ease;
     padding: 0 25px;
-}
-
-.warning{
-    color: rgb(238, 46, 46)
 }
 
 .faq-header.active ~ .faq-body{

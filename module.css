@@ -44,17 +44,49 @@
     transform: translateY(3px);
     /* margin-right: px; */
 }
-.level-tag{
+/* .level-tag{
     background-color: #ffe4e1cd;
     color:#991b1b;
+} */
+
+/* bronze level */
+
+.level-tag.bronze-level {
+    background-color: #f6e6da;
+    color: #7c2d12;
 }
+.level-tag.bronze-level svg{
+    fill: #7c2d12;
+}
+
+/* silver level */
+.level-tag.silver-level {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+.level-tag.silver-level svg{
+    fill: #1e293b;
+}
+
+/* gold level */
+.level-tag.gold-level {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+.level-tag.gold-level svg{
+    fill: #92400e;
+}
+
+
+
 .coef-tag{
-    background-color: #fff3d4de;
-    color: #593d00;
+    background-color: #eef2ff;
+    color: #3730a3;
 }
 .lessons-tag{
-    background-color: #d1f7c4c7;
-    color: #155724;
+    background-color: #f5e7f9;
+    color: #701a88;
+    border: 1px solid #ebcff3;
 }
 .back-btn{
     display: flex;

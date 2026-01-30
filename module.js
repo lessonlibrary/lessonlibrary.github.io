@@ -3,6 +3,7 @@ function initModulePage(){
     const moduleTitleEl = document.querySelector('.module-hero-title');
     const coefTagEl = document.querySelector('.coef-tag-value');
     const levelTagEl = document.querySelector('.level-tag-value');
+    const levelTagContainer = document.querySelector('.level-tag')
     const lessonsTagEl = document.querySelector('.lessons-tag-value');
     const navBtnsContainer = document.querySelector('.navigation-buttons-container');
     const lessonsContainerEl = document.querySelector('.lessons-container');
@@ -33,6 +34,18 @@ function initModulePage(){
         moduleTitleEl.innerText = selectedModule.moduleTitle;
         coefTagEl.innerText = selectedModule.coefTag;
         levelTagEl.innerText = levelId.toUpperCase();
+
+        if(levelId === '1st'){
+            levelTagContainer.classList.add('bronze-level')
+        
+        }else if(levelId === '2nd' || levelId === '3rd'){
+            levelTagContainer.classList.add('silver-level')
+        
+        }else if(levelId === '4th' || levelId === '5th'){
+            levelTagContainer.classList.add('gold-level')
+        
+        }
+
         lessonsTagEl.innerText = selectedModule.lessons.length;
         document.title = `${selectedModule.title} ${levelId} Year`
         // Path becomes: pictures/1st/l-1st-m1.jpg
