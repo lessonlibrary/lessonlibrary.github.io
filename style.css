@@ -294,6 +294,33 @@ body::selection{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    min-height: 200px;
+}
+
+.spinner{
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    z-index: 5;
+    border: 7px solid rgba(255, 255, 255, 0.2); /* light gray lines */
+    border-top-color: var(--accent-color);       /* the "active" line */
+    animation: spin 1s linear infinite;
+    /* display: none; */
+}
+
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.modules-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .module {

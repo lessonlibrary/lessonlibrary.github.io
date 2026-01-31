@@ -39,15 +39,14 @@
     font-weight: 800;
     font-size: 0.9rem;
     border-radius: 4px;
+    background-color: #6d6d6dcd;
+    color:#aaa;
+
 }
 .tag svg{
     transform: translateY(3px);
     /* margin-right: px; */
 }
-/* .level-tag{
-    background-color: #ffe4e1cd;
-    color:#991b1b;
-} */
 
 /* bronze level */
 

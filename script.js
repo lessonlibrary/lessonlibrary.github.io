@@ -76,7 +76,6 @@ if(goTopBtn){
             behavior: 'smooth',
         })
     })
-
 }
 
 // navigation bar
@@ -117,6 +116,7 @@ window.addEventListener('click', ()=>{
 //select level logic
 //module cards logic
 let levels
+const spinner = document.querySelector('.spinner')
 
 fetch('./data.json')
     .then(response => response.json())
@@ -124,8 +124,7 @@ fetch('./data.json')
         levels = data
         initModulePage()
     })
-    .catch(err => console.error("Failed to load data.json:", err));
-
+    .catch(err => console.error("Failed to load data.json:", err))
 
 const levelItems = document.querySelectorAll('.level-menu > li')
 
@@ -151,7 +150,7 @@ levelItems.forEach((levelItem) =>{
 
 // RENDER MODULE CARDS
 function renderModules(levelId) {
-    const modulesContainer = document.querySelector('.modules');
+    const modulesContainer = document.querySelector('.modules-content');
     if (!modulesContainer) return; /// what does this do? what happens when there's no modulesContainer
 
     modulesContainer.innerHTML = ''; 

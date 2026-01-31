@@ -34,6 +34,20 @@ function initModulePage(){
         moduleTitleEl.innerText = selectedModule.moduleTitle;
         coefTagEl.innerText = selectedModule.coefTag;
         levelTagEl.innerText = levelId.toUpperCase();
+        
+        const isArabic = moduleId && moduleId.toLowerCase().startsWith('arabic-');
+
+        if (isArabic) {
+            // This flips the entire page logic to Right-To-Left
+            document.documentElement.setAttribute('dir', 'rtl');
+            document.documentElement.lang = 'ar';
+            
+            // Optional: Add a class to the body for specific Arabic styling
+            document.body.classList.add('rtl-layout');
+        } else {
+            document.documentElement.setAttribute('dir', 'ltr');
+            document.documentElement.lang = 'en';
+        }
 
         if(levelId === '1st'){
             levelTagContainer.classList.add('bronze-level')
