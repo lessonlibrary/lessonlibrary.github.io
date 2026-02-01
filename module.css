@@ -9,6 +9,7 @@
     overflow: hidden;
     border: 2px solid #555;
 }
+
 .module-hero::after{
     content: '';
     position: absolute;
@@ -19,6 +20,7 @@
     background: linear-gradient(to right, #000, #312e2e);
     opacity: 0.7;
 }
+
 .module-hero-title{
     position: relative;
     margin: 20px 0 5px 20px;
@@ -26,8 +28,11 @@
     font-size: 2.2rem;
     color: #ddd;
 }
+
 .module-hero-title.arabic-font{
     font-family: 'IBM Plex Sans Arabic', sans-serif;
+    margin: 20px 20px 5px 0;
+
 }
 .tags-container{
     margin: 20px 0 10px 15px;
@@ -38,14 +43,13 @@
 }
 
 .tags-container.rtl-layout{
+    margin: 20px 15px 10px 0;
     justify-content: flex-end;
 }
-/* .tag{
-    justify-content: ;
-} */
+
 .tag{
     font-family: sans-serif;
-    margin: 0 2px 10px 10px;
+    margin: 0 2px 10px 7px;
     padding: 1px 8px 3px 5px;
     font-weight: 800;
     font-size: 0.9rem;
@@ -57,9 +61,14 @@
     transform: translateY(3px);
     /* margin-right: px; */
 }
-
-/* bronze level */
-
+.arabic-tag{
+    background-color: #ecf3e4;
+    color: #3f6212;
+}
+.arabic-tag svg{
+    fill: #3f6212;
+}
+/* Bronze level */
 .level-tag.bronze-level {
     background-color: #f6e6da;
     color: #7c2d12;
@@ -91,10 +100,37 @@
     color: #3730a3;
 }
 
+.coef-tag.low{
+    background-color: #d1fae5;
+    color: #065f46;
+}
+.coef-tag.low svg{
+    fill: #065f46;
+}
+
+.coef-tag.medium{
+    background-color: #e0e7ff;
+    color: #3730a3;
+}
+.coef-tag.medium svg{
+    fill: #3730a3;
+}
+
+.coef-tag.high{
+    background-color: #ffe4e6;
+    color: #9f1239;
+}
+.coef-tag.high svg{
+    fill: #9f1239;
+}
+
 .lessons-tag{
-    background-color: #f5e7f9;
-    color: #701a88;
-    border: 1px solid #ebcff3;
+    background-color: #f0f4f8;
+    color: #334e68;
+    /* border: 1px solid #ebcff3; */
+}
+.lessons-tag svg {
+    fill: #334e68;
 }
 
 .back-btn{
@@ -102,12 +138,21 @@
     align-items: center;
     justify-content: center;
     background-color: #ffffff20;
+    color: #bbb;
     border-radius: 10px;
+    text-decoration: none;
     margin: 10px 0 0 10px;
+    padding: 10px;
     position: relative;
     z-index: 2;
-    width: 40px;
+    max-width: fit-content;
 }
+
+.back-btn.back-btn-rtl-layout {
+    margin: 10px 10px 0 auto ;
+
+}
+
 .back-btn svg{
     fill: #bbb;
 }

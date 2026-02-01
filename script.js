@@ -122,6 +122,18 @@ fetch('./data.json')
     .then(response => response.json())
     .then(data =>{
         levels = data
+        const params = new URLSearchParams(window.location.search);
+        const levelParam = params.get('l') || '3rd';
+
+        if (levelParam && levels[levelParam]) {
+            // Find the specific LI that matches the URL (e.g., data-id="3rd")
+            const autoTarget = document.querySelector(`.level-menu > li[data-id="${levelParam}"]`);
+            if (autoTarget) {
+                // We don't just click it; we manually trigger the same logic
+                // to ensure the UI updates correctly.
+                autoTarget.click();
+            }
+        }
         initModulePage()
     })
     .catch(err => console.error("Failed to load data.json:", err))
@@ -233,14 +245,14 @@ faqHeaders.forEach(faqHeader =>{
 })
 
 
-// On page load, check if a level is already in the URL
-window.addEventListener('DOMContentLoaded', () => {
-    const params = new URLSearchParams(window.location.search);
-    const levelParam = params.get('l');
+// // On page load, check if a level is already in the URL
+// window.addEventListener('DOMContentLoaded', () => {
+//     const params = new URLSearchParams(window.location.search);
+//     const levelParam = params.get('l');
 
-    if (levelParam && levels[levelParam]) {
-        // Find the specific LI and click it automatically
-        const autoTarget = document.querySelector(`.level-menu > li[data-id="${levelParam}"]`);
-        if (autoTarget) autoTarget.click();
-    }
-});
+//     if (levelParam && levels[levelParam]) {
+//         // Find the specific LI and click it automatically
+//         const autoTarget = document.querySelector(`.level-menu > li[data-id="${levelParam}"]`);
+//         if (autoTarget) autoTarget.click();
+//     }
+// });

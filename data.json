@@ -6,56 +6,56 @@
         "id": "writing-1",
         "title": "Writing",
         "moduleTitle": "Writing",
-        "coefTag": 0,
+        "coefTag": 3,
         "lessons": []
       },
       {
         "id": "ict-1",
         "title": "ICT",
         "moduleTitle": "Information and Communication Technology (ICT)",
-        "coefTag": 0,
+        "coefTag": 1,
         "lessons": []
       },
       {
         "id": "ph-phono-1",
         "title": "Ph & Phono",
         "moduleTitle": "Phonetics and Phonology",
-        "coefTag": 0,
+        "coefTag": 1,
         "lessons": []
       },
       {
         "id": "linguistics-1",
         "title": "Linguistics",
         "moduleTitle": "Linguistics",
-        "coefTag": 0,
+        "coefTag": 1,
         "lessons": []
       },
       {
         "id": "grammar-1",
         "title": "Grammar",
         "moduleTitle": "Grammar",
-        "coefTag": 0,
+        "coefTag": 2,
         "lessons": []
       },
       {
         "id": "reading-1",
         "title": "Reading",
         "moduleTitle": "Reading",
-        "coefTag": 0,
+        "coefTag": 2,
         "lessons": []
       },
       {
         "id": "culture-1",
         "title": "Culture Studies",
         "moduleTitle": "Culture Studies",
-        "coefTag": 0,
+        "coefTag": 1,
         "lessons": []
       },
       {
         "id": "rtl-arabic-1",
         "title": "لغة عربية",
         "moduleTitle": "لغة عربية",
-        "coefTag": 0,
+        "coefTag": 1,
         "lessons": [
           { 
             "title": "الجانب المظلم من أبولو 11",
@@ -78,28 +78,28 @@
         "id": "west-civ-lit-2",
         "title": "West. Civ/Lit",
         "moduleTitle": "Western Civilization & Literature",
-        "coefTag": 0,
+        "coefTag": 1,
         "lessons": []
       },
       {
         "id": "grammar-2",
         "title": "Grammar",
         "moduleTitle": "Grammar",
-        "coefTag": 0,
+        "coefTag": 3,
         "lessons": []
       },
       {
         "id": "ict-2",
         "title": "ICT",
         "moduleTitle": "Information and Communicatoin Technology",
-        "coefTag": 0,
+        "coefTag": 1,
         "lessons": []
       },
       {
         "id": "rtl-ed-psych-2",
         "title": "علم ن التربوي",
         "moduleTitle": "علم النفس التربوي",
-        "coefTag": 0,
+        "coefTag": 1,
         "lessons": [
           { 
             "title": "الجانب المظلم من أبولو 11",
@@ -117,14 +117,14 @@
         "id": "linguistics-2",
         "title": "Linguistics",
         "moduleTitle": "Linguistics",
-        "coefTag": 0,
+        "coefTag": 1,
         "lessons": []
       },
       {
         "id": "reading-2",
         "title": "Reading",
         "moduleTitle": "Reading",
-        "coefTag": 0,
+        "coefTag": 2,
         "lessons": []
       },
       {
@@ -138,7 +138,7 @@
         "id": "writing-2",
         "title": "Writing",
         "moduleTitle": "Writing",
-        "coefTag": 0,
+        "coefTag": 3,
         "lessons": []
       }
     ]
