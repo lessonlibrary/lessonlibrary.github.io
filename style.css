@@ -306,7 +306,7 @@ body::selection{
     border: 7px solid rgba(255, 255, 255, 0.2); /* light gray lines */
     border-top-color: var(--accent-color);       /* the "active" line */
     animation: spin 1s linear infinite;
-    /* display: none; */
+    display: none;
 }
 
 @keyframes spin {

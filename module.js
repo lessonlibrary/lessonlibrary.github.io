@@ -1,6 +1,7 @@
 function initModulePage(){
     // 1. SELECTORS
     const moduleTitleEl = document.querySelector('.module-hero-title');
+    const tagsContainer = document.querySelector('.tags-container')
     const coefTagEl = document.querySelector('.coef-tag-value');
     const levelTagEl = document.querySelector('.level-tag-value');
     const levelTagContainer = document.querySelector('.level-tag')
@@ -34,16 +35,21 @@ function initModulePage(){
         moduleTitleEl.innerText = selectedModule.moduleTitle;
         coefTagEl.innerText = selectedModule.coefTag;
         levelTagEl.innerText = levelId.toUpperCase();
-        
-        const isArabic = moduleId && moduleId.toLowerCase().startsWith('arabic-');
+
+        const isArabic = moduleId && moduleId.startsWith('rtl-');
 
         if (isArabic) {
             // This flips the entire page logic to Right-To-Left
-            document.documentElement.setAttribute('dir', 'rtl');
+            lessonsContainerEl.classList.add('arabic-font');
+            moduleTitleEl.classList.add('arabic-font');
+            lessonsContainerEl.setAttribute('dir', 'rtl');
+            navBtnsContainer.setAttribute('dir', 'rtl');
+            moduleTitleEl.setAttribute('dir', 'rtl')
+            tagsContainer.classList.add('rtl-layout')
             document.documentElement.lang = 'ar';
             
             // Optional: Add a class to the body for specific Arabic styling
-            document.body.classList.add('rtl-layout');
+            // document.lessonsContainerEl.classList.add('rtl-layout');
         } else {
             document.documentElement.setAttribute('dir', 'ltr');
             document.documentElement.lang = 'en';
@@ -85,6 +91,9 @@ function initModulePage(){
                 navBtnEl.innerText = `${(idx + 1).toString().padStart(2, '0')}. ${lesson.title}`;
                 navBtnsContainer.appendChild(navBtnEl);
 
+                if(isArabic){
+                    navBtnEl.classList.add('arabic-font')
+                }
                 // FIX: Added Event Listener to handle switching
                 navBtnEl.addEventListener('click', () => {
                     // Remove active class from all buttons and lessons

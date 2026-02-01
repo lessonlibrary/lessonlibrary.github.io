@@ -7,6 +7,7 @@
     border-radius: 10px 10px 0 0;
     position: relative;
     overflow: hidden;
+    border: 2px solid #555;
 }
 .module-hero::after{
     content: '';
@@ -25,6 +26,9 @@
     font-size: 2.2rem;
     color: #ddd;
 }
+.module-hero-title.arabic-font{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
 .tags-container{
     margin: 20px 0 10px 15px;
     position: relative;
@@ -32,6 +36,13 @@
     display: flex;
     justify-content: start;
 }
+
+.tags-container.rtl-layout{
+    justify-content: flex-end;
+}
+/* .tag{
+    justify-content: ;
+} */
 .tag{
     font-family: sans-serif;
     margin: 0 2px 10px 10px;
@@ -41,7 +52,6 @@
     border-radius: 4px;
     background-color: #6d6d6dcd;
     color:#aaa;
-
 }
 .tag svg{
     transform: translateY(3px);
@@ -76,17 +86,17 @@
     fill: #92400e;
 }
 
-
-
 .coef-tag{
     background-color: #eef2ff;
     color: #3730a3;
 }
+
 .lessons-tag{
     background-color: #f5e7f9;
     color: #701a88;
     border: 1px solid #ebcff3;
 }
+
 .back-btn{
     display: flex;
     align-items: center;
@@ -126,6 +136,11 @@
     border-color: #111;
     color: var(--accent-color);
 }
+
+.nav-btn.arabic-font{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
 .navigation-buttons-container{
     margin: 5px auto;
     width: 97vw;
@@ -136,6 +151,10 @@
     justify-content: flex-start;
     overflow-x: auto;
     gap: 5px;
+}
+
+.navigation-buttons-container.arabic-font{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 /* The code below was added by Gemini */
@@ -165,6 +184,9 @@
     width: 97vw;
     border-radius: 0 0 10px 10px;
     position: relative;
+}
+.lessons-container.arabic-font{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 .lesson{
     display: none;
@@ -220,12 +242,99 @@
 
 
 
-.lesson h2 { color: var(--accent-color); margin-bottom: 5px; }
-.lesson h3 { color: #ddd; border-left: 4px solid var(--accent-color); padding-left: 10px; margin-top: 20px; }
-.preamble-quote { font-style: italic; background: #444; padding: 15px; border-radius: 5px; color: #eee; line-height: 1.6; }
-.article-section h4 { color: #bbb; margin-bottom: 5px; }
-.article-section p { color: #ccc; margin-bottom: 15px; font-family: serif; }
+/* --- CORE LESSON WRAPPER --- */
+.lesson-container {
+    --accent: var(--accent-color, #3b82f6);
+    --bg-surface: #333;
+    --bg-mute: #444;
+    --text-main: #ccc;
+    --text-dim: #bbb;
+    --text-bright: #eee;
+    
+    line-height: 1.6;
+    color: var(--text-main);
+}
 
-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-th, td { text-align: left; padding: 8px; border-bottom: 1px solid #555; color: #eee; }
-th { color: var(--accent-color); text-transform: uppercase; font-size: 0.8rem; }
+/* --- THE DYNAMIC ARABIC OVERRIDE --- */
+/* This triggers when the JS adds .arabic-font */
+.lesson-container.arabic-font {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    line-height: 1.8; /* Arabic needs more vertical space */
+}
+
+/* --- HEADINGS (Semantic & Adaptive) --- */
+.content-h1 { font-size: 2.2rem; color: var(--accent); margin-bottom: 1rem; font-weight: 700; }
+.content-h2 { font-size: 1.8rem; color: var(--accent); margin-bottom: 0.8rem; font-weight: 600; }
+
+/* The "Decorative" Heading - Logic replaces border-left with inline-start */
+.content-h3-decorated {
+    color: var(--text-bright);
+    border-inline-start: 4px solid var(--accent);
+    padding-inline-start: 12px;
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.4rem;
+}
+
+.content-h4-sub { color: var(--text-dim); font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* --- TEXT BLOCKS --- */
+.text-paragraph { margin-bottom: 1.2rem; font-size: 1.05rem; }
+.text-highlight { color: var(--accent); font-weight: 600; }
+
+/* --- CALLOUTS & QUOTES (The old "Preamble") --- */
+.callout-box {
+    background: var(--bg-mute);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid #555;
+}
+
+.callout-quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--text-bright);
+    text-align: center;
+    display: block;
+}
+
+.callout-attribution {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-top: 10px;
+}
+
+/* --- DATA VISUALIZATION (Tables) --- */
+.data-table-wrapper { overflow-x: auto; margin: 20px 0; border-radius: 8px; border: 1px solid #555; }
+.data-table { width: 100%; border-collapse: collapse; background: #2a2a2a; }
+.data-table th { 
+    background: #222; 
+    color: var(--accent); 
+    text-align: start; /* Adaptive to LTR/RTL */
+    padding: 12px; 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+}
+.data-table td { padding: 12px; border-bottom: 1px solid #444; color: var(--text-bright); }
+.data-table tr:last-child td { border-bottom: none; }
+
+/* --- LISTS & BULLETS --- */
+.list-standard { margin: 15px 0; padding-inline-start: 25px; }
+.list-item { margin-bottom: 8px; }
+.list-item::marker { color: var(--accent); }
+
+/* --- MEDIA & CAPTIONS --- */
+.media-container { margin: 25px 0; text-align: center; }
+.media-img { max-width: 100%; border-radius: 8px; border: 2px solid #444; }
+.media-caption { font-size: 0.85rem; color: var(--text-dim); margin-top: 8px; display: block; }
+
+/* --- ARABIC SPECIFIC ADJUSTMENTS --- */
+[dir='rtl'] .content-h3-decorated {
+    /* No manual flipping needed because of border-inline-start! */
+}
+
+[dir='rtl'] .callout-quote {
+    font-style: normal; /* Italic looks bad in many Arabic fonts */
+}
