@@ -25,7 +25,7 @@
     position: relative;
     margin: 20px 0 5px 20px;
     z-index: 2;
-    font-size: 2.2rem;
+    font-size: 2.3rem;
     color: #ddd;
 }
 
@@ -40,11 +40,13 @@
     z-index: 2;
     display: flex;
     justify-content: start;
+    flex-wrap: wrap;
 }
 
 .tags-container.rtl-layout{
     margin: 20px 15px 10px 0;
     justify-content: flex-end;
+
 }
 
 .tag{
@@ -56,6 +58,7 @@
     border-radius: 4px;
     background-color: #6d6d6dcd;
     color:#aaa;
+    flex-shrink: 0;
 }
 .tag svg{
     transform: translateY(3px);
@@ -140,6 +143,7 @@
     background-color: #ffffff20;
     color: #bbb;
     border-radius: 10px;
+    font-weight: 500;
     text-decoration: none;
     margin: 10px 0 0 10px;
     padding: 10px;
@@ -263,8 +267,8 @@
 
 @media(min-width: 360px) and (max-width: 500px){
     .module-hero-title{
-        margin: 5px 10px 10px;
-        font-size: 1.8rem;
+        margin: 10px 10px 10px;
+        font-size: 1.9rem;
     }
     .tags-container{
         margin: 3px;
@@ -382,5 +386,5 @@
 }
 
 [dir='rtl'] .callout-quote {
-    font-style: normal; /* Italic looks bad in many Arabic fonts */
+    font-style: normal;
 }
