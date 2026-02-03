@@ -18,7 +18,7 @@ const components = {
 
                 <a href="index.html" class="home-link" >Home</a>
                 <a href="index.html#contact">Contact</a>
-                <a href="#">About</a>
+                <a href="">About</a>
             </div>
         
             </nav>
