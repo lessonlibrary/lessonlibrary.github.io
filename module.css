@@ -34,6 +34,10 @@
     margin: 20px 20px 5px 0;
 
 }
+
+/* .lessons-container{
+    max-width: 1000px;
+} */
 .tags-container{
     margin: 20px 0 10px 15px;
     position: relative;
@@ -289,7 +293,15 @@
 
 }
 
-
+@media (min-width: 1440px) {
+    .module-hero,
+    .navigation-buttons-container,
+    .lessons-container{
+        max-width: 1339px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 
 /* --- CORE LESSON WRAPPER --- */

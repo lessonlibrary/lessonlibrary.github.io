@@ -119,12 +119,12 @@ let levels
 const spinner = document.querySelector('.spinner')
 
 fetch('./data.json')
-    .then(response => response.json())
+    .then(response => response.json())//this is kind of a routine thing to do, it's not specific to this website.
+
     .then(data =>{
         levels = data
         const params = new URLSearchParams(window.location.search);
         const levelParam = params.get('l') || '3rd';
-
         if (levelParam && levels[levelParam]) {
             // Find the specific LI that matches the URL (e.g., data-id="3rd")
             const autoTarget = document.querySelector(`.level-menu > li[data-id="${levelParam}"]`);
@@ -136,7 +136,7 @@ fetch('./data.json')
         }
         initModulePage()
     })
-    .catch(err => console.error("Failed to load data.json:", err))
+    // .catch(err => console.error("Failed to load data.json:", err))
 
 const levelItems = document.querySelectorAll('.level-menu > li')
 
@@ -167,6 +167,7 @@ function renderModules(levelId) {
 
     modulesContainer.innerHTML = ''; 
     const selectedLevel = levels[levelId]; // repeated in the function above, i think it's better if it's declared in the global scope
+    
 
     if (selectedLevel && selectedLevel.modules) {
         selectedLevel.modules.forEach((moduleData, index) => {
@@ -177,7 +178,7 @@ function renderModules(levelId) {
             moduleCard.classList.add('module', overlayClass);
             
             const mId = moduleData.id;
-            moduleCard.href = `module.html?module=${mId}&l=${levelId}`;
+            moduleCard.href = `module.html?m=${mId}&l=${levelId}`;
 
             // 2. DYNAMIC SRC LOGIC
             // Looks for: pictures/3rd/l-3rd-m1.jpg
@@ -188,8 +189,15 @@ function renderModules(levelId) {
             moduleCard.innerHTML = `
                 <img src="${moduleBg}">
                 <span>${moduleData.title}</span>
+                
             `;
-            
+
+            const currentSpan = moduleCard.querySelector('span')
+
+            if(mId.startsWith('rtl-')){
+                currentSpan.style.fontFamily = 'IBM Plex Sans Arabic'
+            }
+
             modulesContainer.appendChild(moduleCard);
         });
     }
@@ -243,16 +251,3 @@ faqHeaders.forEach(faqHeader =>{
         }
     })
 })
-
-
-// // On page load, check if a level is already in the URL
-// window.addEventListener('DOMContentLoaded', () => {
-//     const params = new URLSearchParams(window.location.search);
-//     const levelParam = params.get('l');
-
-//     if (levelParam && levels[levelParam]) {
-//         // Find the specific LI and click it automatically
-//         const autoTarget = document.querySelector(`.level-menu > li[data-id="${levelParam}"]`);
-//         if (autoTarget) autoTarget.click();
-//     }
-// });

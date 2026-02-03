@@ -340,6 +340,9 @@ body::selection{
     transition: ease 0.4s;
 }
 
+/* .module.arabic-font{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+} */
 
 .module:hover{
     transform: translateY(-8px);
@@ -382,7 +385,7 @@ body::selection{
 
 .module.l-1st-m1::after {background-color: #ba2121;}
 .module.l-1st-m2::after {background-color: #23aef4; opacity: 0.6;}
-.module.l-1st-m3::after {background-color: #194a72;}
+.module.l-1st-m3::after {background-color: #67006a;}
 .module.l-1st-m4::after {background-color: #1d022d;}
 .module.l-1st-m5::after {background-color: #f4df23;}
 .module.l-1st-m6::after {background-color: #3b1258;}
@@ -392,7 +395,7 @@ body::selection{
 .module.l-2nd-m1::after {background-color: #c4665c;}
 .module.l-2nd-m2::after {background-color: #f4df23;}
 .module.l-2nd-m3::after {background-color: #23aef4; opacity: 0.6;}
-.module.l-2nd-m4::after {background-color: #0051ff;}
+.module.l-2nd-m4::after {background-color: #7700aa;}
 .module.l-2nd-m5::after {background-color: #1d022d;}
 .module.l-2nd-m6::after {background-color: #d31717;}
 .module.l-2nd-m7::after {background-color: #19721c;}
@@ -1221,5 +1224,19 @@ footer{
         padding: 0;
         margin: 0;
         font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        background-color: #f00;
+    }
+    .hero,
+    .modules-section,
+    .faqs-section,
+    .contact-section,
+    footer{
+        max-width: 1439px;
+        margin: 0 auto;
     }
 }

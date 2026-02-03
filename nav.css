@@ -147,3 +147,9 @@ nav input{
     }
 }
 
+@media (min-width: 1440px) {
+    nav{
+        max-width: 1439px;
+        margin: 0 auto;
+    }
+}

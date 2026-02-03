@@ -16,7 +16,7 @@ function initModulePage(){
     // 2. PARAMS
     const queryString = window.location.search;
     const params = new URLSearchParams(queryString);
-    const moduleId = params.get('module');
+    const moduleId = params.get('m');
     const levelId = params.get('l'); // Expected values: '1st', '2nd', etc.
     
     const isArabic = moduleId && moduleId.startsWith('rtl-');
@@ -160,6 +160,8 @@ function initModulePage(){
             });
         }
     } else {
-        moduleTitleEl.innerText = "Module not found.";
+        if(moduleTitleEl){
+            moduleTitleEl.innerText = "Module not found.";
+        }
     }
 }
