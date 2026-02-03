@@ -75,6 +75,17 @@
 .arabic-tag svg{
     fill: #3f6212;
 }
+
+/* Bud level */
+.level-tag.bud-level {
+    background-color: #f0fdf4;
+    color: #15803d;
+}
+.level-tag.bud-level svg{
+    fill: #15803d;
+}
+
+
 /* Bronze level */
 .level-tag.bronze-level {
     background-color: #f6e6da;
@@ -312,58 +323,56 @@
     --text-main: #ccc;
     --text-dim: #bbb;
     --text-bright: #eee;
-    
+
     line-height: 1.6;
     color: var(--text-main);
+    max-width: 90ch; /* prevents ultra-wide lines on huge screens */
+    margin: 0 auto;
+    padding: 1rem 2%;
+    box-sizing: border-box;
 }
 
 /* --- THE DYNAMIC ARABIC OVERRIDE --- */
-/* This triggers when the JS adds .arabic-font */
 .lesson-container.arabic-font {
     font-family: 'IBM Plex Sans Arabic', sans-serif;
-    line-height: 1.8; /* Arabic needs more vertical space */
+    line-height: 1.8;
 }
 
 /* --- HEADINGS (Semantic & Adaptive) --- */
-.content-h1 { font-size: 2.2rem; color: var(--accent); margin-bottom: 1rem; font-weight: 700; }
-.content-h2 { font-size: 1.8rem; color: var(--accent); margin-bottom: 0.8rem; font-weight: 600; }
-
-/* The "Decorative" Heading - Logic replaces border-left with inline-start */
+.content-h1 { font-size: clamp(1.8rem, 2.2vw, 2.6rem); color: var(--accent); margin-bottom: 1rem; font-weight: 700; line-height:1.2; }
+.content-h2 { font-size: clamp(1.5rem, 1.8vw, 2rem); color: var(--accent); margin-bottom: 0.8rem; font-weight: 600; line-height:1.25; }
 .content-h3-decorated {
     color: var(--text-bright);
     border-inline-start: 4px solid var(--accent);
     padding-inline-start: 12px;
     margin: 1.5rem 0 1rem 0;
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem,1.4vw,1.6rem);
 }
-
-.content-h4-sub { color: var(--text-dim); font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+.content-h4-sub { color: var(--text-dim); font-size: clamp(0.9rem,1vw,1.1rem); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
 
 /* --- TEXT BLOCKS --- */
-.text-paragraph { margin-bottom: 1.2rem; font-size: 1.05rem; }
+.text-paragraph { margin-bottom: 1.2rem; font-size: clamp(0.95rem,1vw,1.05rem); line-height:1.6; }
 .text-highlight { color: var(--accent); font-weight: 600; }
 
-/* --- CALLOUTS & QUOTES (The old "Preamble") --- */
+/* --- CALLOUTS & QUOTES --- */
 .callout-box {
     background: var(--bg-mute);
-    padding: 20px;
+    padding: clamp(12px,1.2vw,20px);
     border-radius: 8px;
-    margin: 20px 0;
+    margin: clamp(15px,2vw,20px) 0;
     border: 1px solid #555;
 }
-
 .callout-quote {
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: clamp(1rem,1.1vw,1.2rem);
     color: var(--text-bright);
     text-align: center;
     display: block;
 }
-
 .callout-attribution {
     display: block;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem,0.9vw,0.95rem);
     color: var(--text-dim);
     margin-top: 10px;
 }
@@ -374,29 +383,31 @@
 .data-table th { 
     background: #222; 
     color: var(--accent); 
-    text-align: start; /* Adaptive to LTR/RTL */
-    padding: 12px; 
-    font-size: 0.85rem; 
+    text-align: start;
+    padding: clamp(8px,1vw,12px); 
+    font-size: clamp(0.75rem,0.85vw,0.85rem); 
     text-transform: uppercase; 
 }
-.data-table td { padding: 12px; border-bottom: 1px solid #444; color: var(--text-bright); }
+.data-table td { padding: clamp(8px,1vw,12px); border-bottom: 1px solid #444; color: var(--text-bright); }
 .data-table tr:last-child td { border-bottom: none; }
 
 /* --- LISTS & BULLETS --- */
-.list-standard { margin: 15px 0; padding-inline-start: 25px; }
+.list-standard { margin: 15px 0; padding-inline-start: clamp(15px,2vw,25px); }
 .list-item { margin-bottom: 8px; }
 .list-item::marker { color: var(--accent); }
 
 /* --- MEDIA & CAPTIONS --- */
-.media-container { margin: 25px 0; text-align: center; }
+.media-container { margin: clamp(15px,2vw,25px) 0; text-align: center; }
 .media-img { max-width: 100%; border-radius: 8px; border: 2px solid #444; }
-.media-caption { font-size: 0.85rem; color: var(--text-dim); margin-top: 8px; display: block; }
+.media-caption { font-size: clamp(0.8rem,0.9vw,0.85rem); color: var(--text-dim); margin-top: 8px; display: block; }
 
-/* --- ARABIC SPECIFIC ADJUSTMENTS --- */
-[dir='rtl'] .content-h3-decorated {
-    /* No manual flipping needed because of border-inline-start! */
-}
+[dir='rtl'] .callout-quote { font-style: normal; }
 
-[dir='rtl'] .callout-quote {
-    font-style: normal;
+/* --- RESPONSIVE BREAKPOINTS --- */
+@media (max-width: 600px) {
+    .lesson-container { padding: 1rem 4%; }
+    .content-h1 { font-size: 1.8rem; }
+    .content-h2 { font-size: 1.5rem; }
+    .content-h3-decorated { font-size: 1.25rem; padding-inline-start: 8px; }
+    .text-paragraph { font-size: 0.95rem; }
 }

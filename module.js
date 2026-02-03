@@ -102,9 +102,17 @@ function initModulePage(){
         }
 
         if(levelId === '1st'){
+            levelTagContainer.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="18px" height="18px"><path d="M576 96C576 204.1 499.4 294.3 397.6 315.4C389.7 257.3 363.6 205 325.1 164.5C365.2 104 433.9 64 512 64L544 64C561.7 64 576 78.3 576 96zM64 160C64 142.3 78.3 128 96 128L128 128C251.7 128 352 228.3 352 352L352 544C352 561.7 337.7 576 320 576C302.3 576 288 561.7 288 544L288 384C164.3 384 64 283.7 64 160z"/></svg>
+                <span class="level-tag-value">1ST</span>
+                YEAR
+            `
+            levelTagContainer.classList.add('bud-level')
+        
+        }if(levelId === '2nd'){
             levelTagContainer.classList.add('bronze-level')
         
-        }else if(levelId === '2nd' || levelId === '3rd'){
+        }else if(levelId === '3rd'){
             levelTagContainer.classList.add('silver-level')
         
         }else if(levelId === '4th' || levelId === '5th'){
