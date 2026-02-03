@@ -138,12 +138,14 @@ nav input{
         right: 0;
     }
     #sidebar-active:checked ~ #overlay{
+        background-color: #00000034;
         position: fixed;
         height: 100%;
         width: 100%;
         z-index: 9;
         top: 0;
         left: 0;
+        transition: 0.4s ease;
     }
 }
 

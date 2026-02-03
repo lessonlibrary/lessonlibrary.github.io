@@ -17,6 +17,7 @@ const components = {
                 </label>
 
                 <a href="index.html" class="home-link" >Home</a>
+                <a href="" class="theme-btn">Light Mode</a>
                 <a href="index.html#contact">Contact</a>
                 <a href="">About</a>
             </div>
@@ -92,6 +93,22 @@ linksContainerEls.forEach(el =>{
     })
 })
 
+// theme logic
+
+const themeBtn = document.querySelector('.theme-btn')
+
+themeBtn.addEventListener('click', e =>{
+    e.preventDefault()
+    const body = document.querySelector('body')
+    const isLightMode = body.classList.contains('light-mode')
+    if(!isLightMode){
+        body.classList.add('light-mode')
+        themeBtn.innerText = "Dark Mode"
+    }else{
+        body.classList.remove('light-mode')
+        themeBtn.innerText = "Light Mode"
+    }
+})
 //drop-down-menu logic
 
 const levelMenu = document.querySelector('.level-menu')

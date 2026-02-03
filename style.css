@@ -25,6 +25,87 @@ body::selection{
     background-color: #bf60d47b;
 }
 
+body.light-mode{
+    background-color: #eee;
+}
+
+body.light-mode nav{
+    background-color: #ddd;
+}
+
+body.light-mode .links-container{
+    background-color: #ddd;
+}
+
+body.light-mode nav a {
+    color: #000;
+}
+
+body.light-mode nav a:hover {
+    color: var(--accent-color);
+}
+body.light-mode nav svg{
+    fill: #000;
+}
+
+body.light-mode .modules-section{
+    background-color: #ddd;
+}
+
+body.light-mode .levels-label{
+    color: #444;
+}
+body.light-mode .ddm-selected,
+body.light-mode .level-menu{
+    background-color: #fff;
+}
+
+body.light-mode .modules-title,
+body.light-mode .faqs-section-title
+{
+    color: #333;
+}
+
+body.light-mode .faq-container{
+    background-color: #ddd;
+    color: #333;
+}
+
+body.light-mode .faq-container svg{
+    fill: #333
+}
+
+body.light-mode .faq-header:hover{
+    background-color: #ccc;
+}
+
+body.light-mode .faq-header.active{
+    background-color: #ccc;
+    border-bottom: 4px solid #eee;
+}
+
+body.light-mode .faq-header.active svg{
+    fill: var(--accent-color);
+}
+
+body.light-mode .faq-body{
+    background-color: #ddd;
+}
+
+body.light-mode .contact-section{
+    background-color: #ddd;
+}
+
+body.light-mode .contact-section-title,
+body.light-mode .contact-section-p{
+    color: #444;
+}
+
+body.light-mode .contact-section input,
+body.light-mode .contact-section textarea{
+    border: 2px solid var(--accent-color);
+}
+
 .hero{
     background: url(pictures/landing-page.png);
     background-position: center;
@@ -953,6 +1034,23 @@ footer{
     .module{
         width: 150px;
     }
+
+    .module:hover{
+        transform: translateY(0);
+        /* transition: 0.4s ease; */
+    }
+
+    .module:active{
+        transform: translateY(5px);
+        border-bottom: 0px solid var(--accent-color);
+    }
+
+    .module:hover img{
+        transform: scale(1);
+        /* transition: ease-in-out 0.3s; */
+    }
+
+
 
     .module span{
         font-size: 1.2rem;
