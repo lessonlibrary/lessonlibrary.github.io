@@ -27,7 +27,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .links-container{
@@ -77,13 +77,63 @@ nav a:hover{
 .home-link{
     margin-right: auto;
 }
+
 #close-sidebar-button,
 #open-sidebar-button{
     display: none;
 }
+
+.theme-btn-desktop{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 45px;
+    min-height: 25px;
+    border-radius: 20px;
+    padding: 2px;
+    border: none;
+    background: linear-gradient(to right, #efa14e, #f9f912);
+    margin-left: 25px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    position: relative;
+}
+
+
+
+.theme-btn-desktop svg{
+    fill: #111;
+    position: absolute;
+    transition: 2s ease;
+}
+
+.theme-btn-desktop .sun-svg{
+    right: 3px;
+}
+
+.theme-btn-desktop .moon-svg {
+    /* right: 50px; */
+    display: none;
+}
+
+
+.theme-btn-desktop.light-mode {
+    background: linear-gradient(to right, #91dbf7, #63aae8)
+}
+
+.theme-btn-desktop.light-mode .sun-svg{
+    display: none;
+}
+
+.theme-btn-desktop.light-mode .moon-svg{
+    left: 3px;
+    display: block;
+}
+
 nav svg{
     fill: var(--color-one)
 }
+
 nav input{
     display: none;
 }
@@ -123,6 +173,11 @@ nav input{
     .home-link{
         margin-left: 0;
     }
+
+    .theme-btn-desktop{
+        display: none;
+    }
+
     .links-container a{
         height: 60px;
         width: 100%;
