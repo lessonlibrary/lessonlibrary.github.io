@@ -410,3 +410,123 @@
     .content-h3-decorated { font-size: 1.25rem; padding-inline-start: 8px; }
     .text-paragraph { font-size: 0.95rem; }
 }
+
+/* --- LIGHT MODE CORE --- */
+
+body.light-mode {
+    background-color: #e0e7ff; /* Fixes the global background */
+    color: #333;
+}
+
+/* Fix the 1440px red background bug from your original code */
+@media (min-width: 1440px) {
+    body.light-mode {
+        background-color: #fff;
+    }
+}
+
+/* --- MODULE HERO (Lesson Page) --- */
+
+body.light-mode .module-hero {
+    /* background-color: #fff;
+    border: 1px solid #ddd; */
+}
+
+body.light-mode .module-hero::after {
+    /* Slightly lighter overlay so the image isn't too muddy in light mode */
+    background: linear-gradient(to right, #000, #444);
+    opacity: 0.6;
+}
+
+body.light-mode .module-hero-title {
+    color: #fff; /* Keep title white for contrast against the dark overlay */
+}
+
+/* --- BUTTONS & NAVIGATION --- */
+
+body.light-mode .back-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+}
+
+body.light-mode .back-btn svg {
+    fill: #fff;
+}
+
+/* body.light-mode .navigation-buttons-container {
+    background-color: v-color);
+} */
+
+body.light-mode .nav-btn {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+body.light-mode .nav-btn.active {
+    background-color: #eff2ff;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* --- LESSONS CONTENT CONTAINER --- */
+
+body.light-mode .lessons-container {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+body.light-mode .lesson-container {
+    --bg-surface: #fff;
+    --bg-mute: #f7f8ff;
+    --text-main: #444;
+    --text-dim: #666;
+    --text-bright: #000;
+}
+
+body.light-mode .content-h3-decorated {
+    color: #000;
+}
+
+body.light-mode .text-paragraph {
+    color: #222;
+}
+
+body.light-mode .callout-box {
+    background-color: #f7f8ff;
+    border: 1px solid #dce2ff;
+}
+
+body.light-mode .callout-quote {
+    color: #222;
+}
+
+/* Tables */
+body.light-mode .data-table-wrapper {
+    border: 1px solid #ddd;
+}
+
+body.light-mode .data-table {
+    background: #fff;
+}
+
+body.light-mode .data-table th {
+    background: #f0f3ff;
+    color: #000;
+    border-bottom: 2px solid #dce2ff;
+}
+
+body.light-mode .data-table td {
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+/* Media */
+body.light-mode .media-img {
+    border: 1px solid #ddd;
+}
+
+body.light-mode .media-caption {
+    color: #777;
+}

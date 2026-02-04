@@ -26,9 +26,9 @@ body::selection{
 }
 
 /* Light Mode Code Starts Here */
-body.light-mode{
+/* body.light-mode{
     background-color: #fff;
-}
+} */
 
 body.light-mode nav{
     background-color: #fff;
@@ -70,8 +70,8 @@ body.light-mode .levels-label{
 }
 
 body.light-mode .ddm-selected{
-    background-color: #dbdfed;
-    border: 1px solid #ddd;
+    background-color: #ebf0ff;
+    border: 1px solid #ccc;
 
 }
 
