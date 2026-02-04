@@ -98,20 +98,28 @@ linksContainerEls.forEach(el =>{
 })
 
 // theme logic
-
+const body = document.querySelector('body')
 const themeBtn = document.querySelector('.theme-btn')
+const savedTheme = localStorage.getItem('theme')
+
+if(savedTheme === 'light'){
+    body.classList.add('light-mode')
+    themeBtn.classList.add('light-mode')
+        
+}
 
 themeBtn.addEventListener('click', e =>{
     e.preventDefault()
-    const body = document.querySelector('body')
-    const isLightMode = body.classList.contains('light-mode')
-    if(!isLightMode){
-        body.classList.add('light-mode')
-        themeBtn.classList.add('light-mode')
-    }else{
+    
+    const currentTheme = localStorage.getItem('theme')
+    if(currentTheme === 'light'){
         body.classList.remove('light-mode')
         themeBtn.classList.remove('light-mode')
-        themeBtn.classList.add('dark-mode')
+        localStorage.setItem('theme', 'dark')
+    }else{
+        body.classList.add('light-mode')
+        themeBtn.classList.add('light-mode')
+        localStorage.setItem('theme', 'light')
     }
 })
 //drop-down-menu logic
