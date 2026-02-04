@@ -83,7 +83,7 @@ nav a:hover{
     display: none;
 }
 
-.theme-btn-desktop{
+.theme-btn{
     display: flex;
     align-items: center;
     gap: 6px;
@@ -101,31 +101,31 @@ nav a:hover{
 
 
 
-.theme-btn-desktop svg{
+.theme-btn svg{
     fill: #111;
     position: absolute;
     transition: 2s ease;
 }
 
-.theme-btn-desktop .sun-svg{
+.theme-btn .sun-svg{
     right: 3px;
 }
 
-.theme-btn-desktop .moon-svg {
+.theme-btn .moon-svg {
     /* right: 50px; */
     display: none;
 }
 
 
-.theme-btn-desktop.light-mode {
+.theme-btn.light-mode {
     background: linear-gradient(to right, #91dbf7, #63aae8)
 }
 
-.theme-btn-desktop.light-mode .sun-svg{
+.theme-btn.light-mode .sun-svg{
     display: none;
 }
 
-.theme-btn-desktop.light-mode .moon-svg{
+.theme-btn.light-mode .moon-svg{
     left: 3px;
     display: block;
 }
@@ -159,13 +159,13 @@ nav input{
         background-color: #2c2c2c;
         flex-direction: column;
         align-items: flex-start;
-        height: 200%;
+        height: 100%;
         width: 290px;
         position: fixed;
         border-radius: 15px 0 0 15px;
         right: -100%;
         top: 0;
-        box-shadow: -1px 0 5px #1d1d1d9a;
+        /* box-shadow: -1px 0 5px #1d1d1d9a; */
         z-index: 10;
         transition: 0.4s ease-out;
         margin-right: 0;
@@ -174,8 +174,10 @@ nav input{
         margin-left: 0;
     }
 
-    .theme-btn-desktop{
-        display: none;
+    .theme-btn{
+        /* display: none; */
+        margin-left: 19px;
+        margin-top: 10px;
     }
 
     .links-container a{
@@ -193,7 +195,7 @@ nav input{
         right: 0;
     }
     #sidebar-active:checked ~ #overlay{
-        background-color: #00000034;
+        background-color: #00000041;
         position: fixed;
         height: 100%;
         width: 100%;

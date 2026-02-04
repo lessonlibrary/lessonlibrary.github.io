@@ -25,16 +25,17 @@ body::selection{
     background-color: #bf60d47b;
 }
 
+/* Light Mode Code Starts Here */
 body.light-mode{
-    background-color: #eee;
+    background-color: #fff;
 }
 
 body.light-mode nav{
-    background-color: #ddd;
+    background-color: #fff;
 }
 
 body.light-mode .links-container{
-    background-color: #ddd;
+    background-color: #fff;
 }
 
 body.light-mode nav a {
@@ -48,40 +49,72 @@ body.light-mode nav svg{
     fill: #000;
 }
 
+body.light-mode .go-top svg{
+    fill: #fff;
+}
+
+body.light-mode .go-top:hover{
+    background-color: #e5ebff;
+}
+
+body.light-mode .go-top:hover svg{
+    fill: var(--accent-color);
+}
+
 body.light-mode .modules-section{
-    background-color: #ddd;
+    background-color: #eff2ff;
 }
 
 body.light-mode .levels-label{
-    color: #444;
+    color: #000;
 }
-body.light-mode .ddm-selected,
+
+body.light-mode .ddm-selected{
+    background-color: #dbdfed;
+    border: 1px solid #ddd;
+
+}
+
 body.light-mode .level-menu{
+    background-color: #e5ebff;
+}
+
+
+body.light-mode .level-menu li{
+    color: #444;
+    border-bottom: 1px solid #aaa;
+}
+
+body.light-mode .level-menu li:hover{
+    background-color: #dbdfee;
+}
+
+body.light-mode .faqs-section{
     background-color: #fff;
 }
 
 body.light-mode .modules-title,
-body.light-mode .faqs-section-title
-{
-    color: #333;
+body.light-mode .faqs-section-title{
+    color: #000;
 }
 
 body.light-mode .faq-container{
-    background-color: #ddd;
-    color: #333;
+    background-color: #f7f8ff;
+    color: #000;
+    border: 1px solid #ddd;
 }
 
 body.light-mode .faq-container svg{
-    fill: #333
+    fill: #000
 }
 
 body.light-mode .faq-header:hover{
-    background-color: #ccc;
+    background-color: #f7f8ff;
 }
 
 body.light-mode .faq-header.active{
-    background-color: #ccc;
-    border-bottom: 4px solid #eee;
+    background-color: #f7f8ff;
+    border-bottom: 1px solid #ddd;
 }
 
 body.light-mode .faq-header.active svg{
@@ -89,23 +122,91 @@ body.light-mode .faq-header.active svg{
 }
 
 body.light-mode .faq-body{
-    background-color: #ddd;
+    background-color: #f7f8ff;
+    color: #222;
 }
 
 body.light-mode .contact-section{
-    background-color: #ddd;
+    background-color: #eff2ff;
 }
 
-body.light-mode .contact-section-title,
+body.light-mode .contact-section-title{
+    color: #000;
+}
+
 body.light-mode .contact-section-p{
+    color: #333;
+}
+
+
+body.light-mode .email-input, 
+body.light-mode .name-input, 
+body.light-mode .message-input {
+    background-color: #f6f7ff;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+body.light-mode .email-input:focus, 
+body.light-mode .name-input:focus, 
+body.light-mode .message-input:focus {
+    outline: 1px solid var(--accent-color);
+}
+
+body.light-mode .email-label, 
+body.light-mode .name-label, 
+body.light-mode .message-label {
+    color: #555;
+}
+body.light-mode .send-btn{
+    box-shadow: 0px 4px 1px #b2b2b2;
+}
+
+body.light-mode .send-btn:active{
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+
+
+body.light-mode footer{
+    background-color: #fff;
+}
+
+body.light-mode footer a{
     color: #444;
 }
 
-body.light-mode .contact-section input,
-body.light-mode .contact-section textarea{
-    border: 2px solid var(--accent-color);
+body.light-mode footer .social-links-container svg{
+    background-color: #eee;
+    box-shadow: 1px 1px 10px #00000022, -1px -1px 10px #00000022;
+    fill: var(--accent-color);
 }
 
+body.light-mode footer .social-links-container svg:hover{
+    /* background-color: var(--accent-color); */
+    box-shadow: none;
+    transform: scale(0.98);
+    /* fill: #fff; */
+}
+
+body.light-mode .madeWithLove{
+    color: #666
+}
+body.light-mode .madeWithLove svg{
+    fill: #888
+}
+
+body.light-mode .madeWithLove:hover{
+    color: #fff;
+    background: linear-gradient(to right, #9843c8, #9743c896);
+
+}
+body.light-mode .madeWithLove:hover svg{
+    fill: rgb(177, 52, 52)
+}
+
+/* Light Mode Code Ends */
 .hero{
     background: url(pictures/landing-page.png);
     background-position: center;
@@ -512,17 +613,15 @@ body.light-mode .contact-section textarea{
     flex-direction: column;
     min-width: 90%;
     max-width: 900px;
-    gap: 4px;
+    gap: 5px;
     margin: 20px auto;
 }
 
 .faq-container{
-    background-color: #303030;
+    background-color: #393939;
     position: relative;
-    /* margin: 0 auto; */
     border-radius: 4px;
-
-
+    border: 1px solid #545454;
 }
 
 .faq-header{
@@ -531,7 +630,6 @@ body.light-mode .contact-section textarea{
     font-weight: 500;
     cursor: pointer;
     display: block;
-    /* border-top: 4px solid var(--border-color); */
 }
 
 
@@ -560,7 +658,7 @@ body.light-mode .contact-section textarea{
 }
 
 .faq-body{
-    background-color: #363636;
+    background-color: #393939;
     max-height: 0;
     overflow: hidden;
     font-size: 1.1rem;
@@ -576,10 +674,10 @@ body.light-mode .contact-section textarea{
 }
 
 .faq-header.active{
-    background-color: #2e2e2e;
+    background-color: #363636;
     color: var(--accent-color);
     transition: color ease 0.7s;
-    border-bottom: 4px solid var(--border-color);
+    border-bottom: 1px solid #555;
 }
 
 .faq-header.active svg{
