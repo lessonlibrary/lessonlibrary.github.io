@@ -179,7 +179,7 @@ body.light-mode footer a{
 
 body.light-mode footer .social-links-container svg{
     background-color: #eee;
-    box-shadow: 1px 1px 10px #00000022, -1px -1px 10px #00000022;
+    /* box-shadow: 1px 1px 10px #00000022, -1px -1px 10px #00000022; */
     fill: var(--accent-color);
 }
 
