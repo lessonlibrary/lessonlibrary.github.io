@@ -105,7 +105,6 @@ const savedTheme = localStorage.getItem('theme')
 if(savedTheme === 'light'){
     body.classList.add('light-mode')
     themeBtn.classList.add('light-mode')
-        
 }
 
 themeBtn.addEventListener('click', e =>{
