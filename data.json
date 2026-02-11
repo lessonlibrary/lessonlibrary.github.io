@@ -76,7 +76,7 @@
         "id": "grammar-2",
         "title": "Grammar",
         "moduleTitle": "Grammar",
-        "coefTag": 3,
+        "coefTag": 2,
         "lessons": []
       },
       {
@@ -133,7 +133,7 @@
         "id": "brit-am-civ-3",
         "title": "Brit/Am Civ.",
         "moduleTitle": "British / American Civilization",
-        "coefTag": 5,
+        "coefTag": 2,
         "lessons": [
           {
             "title": "0 and 1",
@@ -159,7 +159,7 @@
         "id": "sp-ph-3",
         "title": "Sp & Ph",
         "moduleTitle": "Speaking and Phonetics",
-        "coefTag": 1,
+        "coefTag": 2,
         "lessons": []
       },
       {
@@ -173,14 +173,14 @@
         "id": "brit-am-lit-3",
         "title": "Brit/Am Lit",
         "moduleTitle": "British / American Literature",
-        "coefTag": 1,
+        "coefTag": 2,
         "lessons": []
       },
       {
         "id": "ict-3",
         "title": "ICT",
         "moduleTitle": "Information and Communication Technology (ICT)",
-        "coefTag": 3,
+        "coefTag": 1,
         "lessons": [
         ]
       },
@@ -188,7 +188,7 @@
         "id": "rtl-intro-psycho-3",
         "title": "م إ علم النفس",
         "moduleTitle": "مدخل إلى علم النفس",
-        "coefTag": 4,
+        "coefTag": 1,
         "lessons": [
           { 
             "title": "السجل الذهبي",
@@ -204,7 +204,7 @@
         "id": "linguistics-3",
         "title": "Linguistics",
         "moduleTitle": "Linguistics",
-        "coefTag": 8,
+        "coefTag": 1,
         "lessons": []
       }
     ]
@@ -216,64 +216,64 @@
       {
         "id": "psychopeda-4",
         "title": "Psychopeda.",
-        "moduleTitle": "Psychopedia",
-        "coefTag": 8,
+        "moduleTitle": "Psychopedagogy",
+        "coefTag": 1,
         "lessons": []
       },
       {
         "id": "legislation-4",
         "title": "Legislation R/M",
         "moduleTitle": "Legislation",
-        "coefTag": 8,
+        "coefTag": 1,
         "lessons": []
       },
       {
         "id": "brit-am-civ-4",
         "title": "Brit/Am Civ.",
         "moduleTitle": "British / American Civilization",
-        "coefTag": 8,
+        "coefTag": 1,
         "lessons": []
       },
       {
         "id": "af-civ-lit-4",
         "title": "Af. Civ/Lit",
         "moduleTitle": "African Civlization & Literature",
-        "coefTag": 8,
+        "coefTag": 1,
         "lessons": []
       },
       {
         "id": "tbesd-4",
         "title": "TBESD",
         "moduleTitle": "TBESD (acro)",
-        "coefTag": 8,
+        "coefTag": 2,
         "lessons": []
       },
       {
         "id": "app-ling-4",
         "title": "App. Ling.",
         "moduleTitle": "Applied Linguistics",
-        "coefTag": 8,
+        "coefTag": 1,
         "lessons": []
       },
       {
         "id": "brit-am-lit-4",
         "title": "Brit/Am Li.",
         "moduleTitle": "British / American Literature",
-        "coefTag": 8,
+        "coefTag": 1,
         "lessons": []
       },
       {
         "id": "tefl-4",
         "title": "TEFL",
         "moduleTitle": "Teaching English as a Foreign Language",
-        "coefTag": 8,
+        "coefTag": 1,
         "lessons": []
       },
       {
         "id": "mdd-4",
         "title": "MDD",
         "moduleTitle": "MDD (acro)",
-        "coefTag": 8,
+        "coefTag": 2,
         "lessons": []
       }
     ]
@@ -286,57 +286,57 @@
         {
             "id": "issues-5",
             "title": "Issues in C.",
-            "moduleTitle": "Issues in C (acro)",
-            "coefTag": 0,
+            "moduleTitle": "Issues in Culture",
+            "coefTag": 1,
             "lessons": []
         },
         {
             "id": "legislation-5",
             "title": "Legislation",
             "moduleTitle": "Legislation",
-            "coefTag": 8,
+            "coefTag": 1,
             "lessons": []
         },
         {
             "id": "brit-am-lit-5",
             "title": "Brit/Am Lit.",
             "moduleTitle": "British / American Literature",
-            "coefTag": 0,
+            "coefTag": 1,
             "lessons": []
         },
         {
             "id": "app-ling-5",
             "title": "App. Ling.",
             "moduleTitle": "Applied Linguistics",
-            "coefTag": 8,
+            "coefTag": 1,
             "lessons": []
         },
         {
             "id": "syll-des-5",
             "title": "Syll. Des.",
-            "moduleTitle": "Syll Des (acro)",
-            "coefTag": 0,
+            "moduleTitle": "Syllabus Design",
+            "coefTag": 1,
             "lessons": []
         },
         {
             "id": "brit-am-civ-5",
             "title": "Brit/Am Civ.",
             "moduleTitle": "British / American Civilization",
-            "coefTag": 0,
+            "coefTag": 1,
             "lessons": []
         },
         {
             "id": "pedagogy-5",
             "title": "Pedagogy",
-            "moduleTitle": "Pedagogy",
-            "coefTag": 0,
+            "moduleTitle": "Pedagogical Trends",
+            "coefTag": 1,
             "lessons": []
         },
         {
             "id": "af-civ-lit-5",
             "title": "Af. Civ/Lit",
             "moduleTitle": "African Civilization & Literature",
-            "coefTag": 0,
+            "coefTag": 1,
             "lessons": []
         }
         ]
