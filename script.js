@@ -135,7 +135,7 @@ if(ddmSelected){
 }
 
 window.addEventListener('click', ()=>{
-    if(ddmSelected.classList.contains('active')){
+    if(ddmSelected && ddmSelected.classList.contains('active')){
         ddmSelected.classList.remove('active')
     }
 })

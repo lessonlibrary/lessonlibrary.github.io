@@ -59,6 +59,23 @@ function initModulePage(){
     if (selectedModule) {
         // 1. CONTENT INJECTION
         moduleTitleEl.innerText = selectedModule.moduleTitle;
+        
+        // const aboutTextContainer = document.querySelector('.about-module-text')
+        // const aboutContent = selectedModule.aboutModule
+
+        // aboutTextContainer.innerText = aboutContent
+        
+        // const showMoreSpan = document.querySelector('.show-more-span')
+        
+        // showMoreSpan.addEventListener('click', ()=> {
+        //     const container = document.querySelector('.about-info-container');
+        //     const isExpanded = container.classList.toggle('expanded');
+            
+        //     // Updates the text based on the state
+        //     showMoreSpan.textContent = isExpanded ? ' Show Less' : ' Show More...';
+        // });
+
+
 
         const coefValue = Number(selectedModule.coefTag)
         coefTagContainer.classList.remove('low', 'medium', 'high')

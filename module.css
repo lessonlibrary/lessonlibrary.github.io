@@ -35,9 +35,52 @@
 
 }
 
-/* .lessons-container{
-    max-width: 1000px;
-} */
+/* .about-info-container {
+    position: relative;
+    z-index: 2;
+    margin: 15px 0 5px 20px;
+    max-width: 400px;
+}
+
+.about-module {
+    font-weight: 600;
+    color: #eee;
+}
+
+.text-and-read-more-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.about-module-text {
+    color: #ddd;
+    margin: 4px 0 0 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    flex: 1;
+}
+
+.show-more-span {
+    cursor: pointer;
+    flex-shrink: 0;
+    color: #ddd;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.about-info-container.expanded .text-and-read-more-container {
+    display: block;
+}
+
+.about-info-container.expanded .about-module-text {
+    white-space: normal;
+    display: inline;
+}
+
+.about-info-container.expanded .read-more-span {
+    display: inline;
+}
+ */
 .tags-container{
     margin: 20px 0 10px 15px;
     position: relative;
