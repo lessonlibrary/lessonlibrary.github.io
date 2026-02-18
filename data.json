@@ -339,7 +339,7 @@
       {
         "id": "tbesd-4",
         "title": "TBESD",
-        "moduleTitle": "TBESD (acro)",
+        "moduleTitle": "Testing, Bibliography, and Evaluation of Syllabus Design (TBESD)",
         "coefTag": 2,
         "lessons": []
       },
@@ -367,7 +367,7 @@
       {
         "id": "mdd-4",
         "title": "MDD",
-        "moduleTitle": "MDD (acro)",
+        "moduleTitle": "Materials Design and Development (MDD)",
         "coefTag": 2,
         "lessons": []
       }
