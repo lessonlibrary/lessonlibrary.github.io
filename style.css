@@ -26,6 +26,7 @@ body::selection{
 }
 
 /* Light Mode Code Starts Here */
+
 /* body.light-mode{
     background-color: #fff;
 } */
@@ -62,7 +63,7 @@ body.light-mode .go-top:hover svg{
 }
 
 body.light-mode .modules-section{
-    background-color: #eff2ff;
+    background-color: #fff;
 }
 
 body.light-mode .levels-label{
@@ -70,13 +71,13 @@ body.light-mode .levels-label{
 }
 
 body.light-mode .ddm-selected{
-    background-color: #ebf0ff;
+    background-color: #fffefe;
     border: 1px solid #ccc;
 
 }
 
 body.light-mode .level-menu{
-    background-color: #ebf0ff;
+    background-color: #fffefe;
 }
 
 
@@ -86,11 +87,11 @@ body.light-mode .level-menu li{
 }
 
 body.light-mode .level-menu li:hover{
-    background-color: #dbdfee;
+    background-color: #f1f3ff;
 }
 
 body.light-mode .faqs-section{
-    background-color: #fff;
+    background-color: #f1f3ff;
 }
 
 body.light-mode .modules-title,
@@ -99,9 +100,10 @@ body.light-mode .faqs-section-title{
 }
 
 body.light-mode .faq-container{
-    background-color: #f7f8ff;
+    background-color: #f9fbff;
+    /* f7f8ff  b c*/
     color: #000;
-    border: 1px solid #ddd;
+    border: 1px solid #cecece;
 }
 
 body.light-mode .faq-container svg{
@@ -127,7 +129,8 @@ body.light-mode .faq-body{
 }
 
 body.light-mode .contact-section{
-    background-color: #eff2ff;
+    background-color: #fff;
+    /* eff2ff */
 }
 
 body.light-mode .contact-section-title{
@@ -142,8 +145,8 @@ body.light-mode .contact-section-p{
 body.light-mode .email-input, 
 body.light-mode .name-input, 
 body.light-mode .message-input {
-    background-color: #f6f7ff;
-    border: 1px solid #ccc;
+    background-color: #fff;
+    border: 1px solid #bbb;
     color: #333;
 }
 
@@ -158,6 +161,7 @@ body.light-mode .name-label,
 body.light-mode .message-label {
     color: #555;
 }
+
 body.light-mode .send-btn{
     box-shadow: 0px 4px 1px #b2b2b2;
 }
@@ -165,45 +169,6 @@ body.light-mode .send-btn{
 body.light-mode .send-btn:active{
     box-shadow: none;
     transform: translateY(4px);
-}
-
-
-
-body.light-mode footer{
-    background-color: #fff;
-}
-
-body.light-mode footer a{
-    color: #444;
-}
-
-body.light-mode footer .social-links-container svg{
-    background-color: #eee;
-    /* box-shadow: 1px 1px 10px #00000022, -1px -1px 10px #00000022; */
-    fill: var(--accent-color);
-}
-
-body.light-mode footer .social-links-container svg:hover{
-    /* background-color: var(--accent-color); */
-    box-shadow: none;
-    transform: scale(0.98);
-    /* fill: #fff; */
-}
-
-body.light-mode .madeWithLove{
-    color: #666
-}
-body.light-mode .madeWithLove svg{
-    fill: #888
-}
-
-body.light-mode .madeWithLove:hover{
-    color: #fff;
-    background: linear-gradient(to right, #9843c8, #9743c896);
-
-}
-body.light-mode .madeWithLove:hover svg{
-    fill: rgb(177, 52, 52)
 }
 
 /* Light Mode Code Ends */
@@ -905,7 +870,7 @@ footer{
     cursor: pointer;
     background-color: var(--accent-color);
     opacity: 0;
-    transition: ease 0.7s;
+    transition: ease 0.4s;
 }
 
 .go-top:hover{
